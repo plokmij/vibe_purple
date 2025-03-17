@@ -27,6 +27,7 @@ class SettingsScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 28),
               children: [
                 ListTile(
+                  leading: const Icon(Icons.language),
                   title: Text(tr.settingsOptionLanguage),
                   trailing: const LanguageSelector(),
                 ),
