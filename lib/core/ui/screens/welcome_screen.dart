@@ -44,14 +44,15 @@ class WelcomeScreen extends ConsumerWidget {
                             style: CustomStyle.textStyle20
                                 .copyWith(color: colorScheme.onSurface),
                           ),
-                          const Text('- ${s.changesThemeChange}'),
-                          const Text('- ${s.changesLocalization}'),
-                          Image.asset('assets/images/purple-change-theme.gif'),
+                          const Text('- ${s.changesNewLocale}'),
                           Text(
                             s.changesInPreviousVersions,
                             style: CustomStyle.textStyle20
                                 .copyWith(color: colorScheme.onSurface),
                           ),
+                          const Text('- ${s.changesThemeChange}'),
+                          const Text('- ${s.changesLocalization}'),
+                          Image.asset('assets/images/purple-change-theme.gif'),
                           const Text('- ${s.changesUiRedesign}'),
                           const Text('- ${s.changesCategoriesReorder}'),
                           Image.asset(

@@ -1,5 +1,5 @@
 const String appName = 'Purple Task';
-const String appVersion = '2.1.0';
+const String appVersion = '2.1.1';
 
 const String licenseShort = 'MIT License';
 const String mitLicense = '''
@@ -53,3 +53,5 @@ const String changesTasksReorder = 'Tasks can also be reordered as needed';
 const String changesThemeChange = 'Added theme mode switch in Settings.';
 const String changesLocalization =
     "Added localization support.\nOnly couple languages for now but if you like to help and have some experience translating apps, please contact me.\nYou can find the details on project's GitHub page.";
+const String changesNewLocale =
+    'Added new translations: Dutch, Filipino, French, German.';
