@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:purple_task/core/constants/supported_locales.dart';
 import 'package:purple_task/features/settings/controllers/settings_controller.dart';
@@ -11,7 +10,7 @@ part 'providers.g.dart';
 
 @riverpod
 bool isUncategorizedViewPreferred(Ref ref) {
-  final settings = ref.watch(settingsNotifierProvider);
+  final settings = ref.watch(settingsProvider);
 
   return settings.value?.isUncategorizedViewPreferred ?? true;
 }
@@ -25,16 +24,16 @@ Future<String?> savedLocale(Ref ref) async {
 class AppLocale extends _$AppLocale {
   @override
   Locale? build() {
-    final savedLocale = ref.watch(savedLocaleProvider).valueOrNull;
+    final savedLocale = ref.watch(savedLocaleProvider).value;
     return savedLocale != null ? Locale(savedLocale) : null;
   }
 
   Future<void> update(Locale locale) async {
     await ref
-        .read(settingsNotifierProvider.notifier)
+        .read(settingsProvider.notifier)
         .setLocale(value: locale.languageCode);
 
-    final savedLocale = ref.read(settingsNotifierProvider).valueOrNull?.locale;
+    final savedLocale = ref.read(settingsProvider).value?.locale;
 
     final updatedLocale = switch (savedLocale) {
       null => SupportedLocales.en,

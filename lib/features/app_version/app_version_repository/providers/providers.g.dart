@@ -6,24 +6,49 @@ part of 'providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(appVersionRepository)
+final appVersionRepositoryProvider = AppVersionRepositoryProvider._();
+
+final class AppVersionRepositoryProvider extends $FunctionalProvider<
+    AppVersionRepository,
+    AppVersionRepository,
+    AppVersionRepository> with $Provider<AppVersionRepository> {
+  AppVersionRepositoryProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'appVersionRepositoryProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$appVersionRepositoryHash();
+
+  @$internal
+  @override
+  $ProviderElement<AppVersionRepository> $createElement(
+          $ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  AppVersionRepository create(Ref ref) {
+    return appVersionRepository(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(AppVersionRepository value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<AppVersionRepository>(value),
+    );
+  }
+}
+
 String _$appVersionRepositoryHash() =>
     r'3ed1a59c16994eea92b6e77e608ee8cfc322ead5';
-
-/// See also [appVersionRepository].
-@ProviderFor(appVersionRepository)
-final appVersionRepositoryProvider =
-    AutoDisposeProvider<AppVersionRepository>.internal(
-  appVersionRepository,
-  name: r'appVersionRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$appVersionRepositoryHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef AppVersionRepositoryRef = AutoDisposeProviderRef<AppVersionRepository>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

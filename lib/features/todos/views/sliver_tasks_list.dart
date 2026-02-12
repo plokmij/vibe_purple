@@ -111,7 +111,7 @@ class SliverTasksList extends ConsumerWidget {
           );
         }
 
-        ref.read(tasksNotifierProvider.notifier).reorder(
+        ref.read(tasksProvider.notifier).reorder(
           affectedTasksList: [
             currentItem,
             ...affectedTasksList,

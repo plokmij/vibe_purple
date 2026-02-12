@@ -1,5 +1,4 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hive_ce_flutter/hive_ce_flutter.dart';
 import 'package:purple_task/core/constants/key_names.dart';
 import 'package:purple_task/core/hive_legacy/hive_entities/category_entity.dart';
 import 'package:purple_task/core/hive_legacy/hive_entities/task_entity.dart';

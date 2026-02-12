@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purple_task/core/styles/themes.dart';
 import 'package:purple_task/features/settings/controllers/settings_controller.dart';
 import 'package:purple_task/features/settings/settings_repository/providers/providers.dart';
@@ -16,7 +15,7 @@ Future<AppThemeMode> savedTheme(Ref ref) async {
 class AppTheme extends _$AppTheme {
   @override
   ThemeMode build() {
-    final savedTheme = ref.watch(savedThemeProvider).valueOrNull;
+    final savedTheme = ref.watch(savedThemeProvider).value;
 
     return switch (savedTheme) {
       AppThemeMode.dark => ThemeMode.dark,
@@ -27,10 +26,10 @@ class AppTheme extends _$AppTheme {
 
   Future<void> update(AppThemeMode theme) async {
     await ref
-        .read(settingsNotifierProvider.notifier)
+        .read(settingsProvider.notifier)
         .setTheme(value: theme.name);
 
-    final savedTheme = ref.read(settingsNotifierProvider).valueOrNull?.theme;
+    final savedTheme = ref.read(settingsProvider).value?.theme;
 
     final updatedTheme = switch (savedTheme) {
       AppThemeMode.dark => ThemeMode.dark,

@@ -35,7 +35,7 @@ class CategoriesNotifier extends _$CategoriesNotifier {
     int oldIndex,
     int newIndex,
   ) async {
-    final categories = state.valueOrNull;
+    final categories = state.value;
 
     var newIndexLocal = newIndex;
     final categoriesToBeUpdated = <Category>[];

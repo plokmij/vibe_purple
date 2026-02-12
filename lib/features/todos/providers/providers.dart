@@ -1,6 +1,5 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purple_task/core/helpers.dart';
 import 'package:purple_task/features/todos/controllers/categories_controller.dart';
 import 'package:purple_task/features/todos/controllers/category_controller.dart';
@@ -14,7 +13,7 @@ part 'providers.g.dart';
 class NoDueDateTasksInCategory extends _$NoDueDateTasksInCategory {
   @override
   List<Task> build(int categoryId) {
-    final tasks = ref.watch(tasksNotifierProvider).valueOrNull;
+    final tasks = ref.watch(tasksProvider).value;
 
     if (tasks == null) {
       return [];
@@ -35,7 +34,7 @@ class NoDueDateTasksInCategory extends _$NoDueDateTasksInCategory {
 class OverdueTasksInCategory extends _$OverdueTasksInCategory {
   @override
   List<Task> build(int categoryId) {
-    final tasks = ref.watch(tasksNotifierProvider).valueOrNull;
+    final tasks = ref.watch(tasksProvider).value;
 
     if (tasks == null) {
       return [];
@@ -64,7 +63,7 @@ class OverdueTasksInCategory extends _$OverdueTasksInCategory {
 class TodayTasksInCategory extends _$TodayTasksInCategory {
   @override
   List<Task> build(int categoryId) {
-    final tasks = ref.watch(tasksNotifierProvider).valueOrNull;
+    final tasks = ref.watch(tasksProvider).value;
 
     if (tasks == null) {
       return [];
@@ -88,7 +87,7 @@ class TodayTasksInCategory extends _$TodayTasksInCategory {
 class TomorrowTasksInCategory extends _$TomorrowTasksInCategory {
   @override
   List<Task> build(int categoryId) {
-    final tasks = ref.watch(tasksNotifierProvider).valueOrNull;
+    final tasks = ref.watch(tasksProvider).value;
 
     if (tasks == null) {
       return [];
@@ -112,7 +111,7 @@ class TomorrowTasksInCategory extends _$TomorrowTasksInCategory {
 class FutureTasksInCategory extends _$FutureTasksInCategory {
   @override
   List<Task> build(int categoryId) {
-    final tasks = ref.watch(tasksNotifierProvider).valueOrNull;
+    final tasks = ref.watch(tasksProvider).value;
 
     if (tasks == null) {
       return [];
@@ -137,7 +136,7 @@ class FutureTasksInCategory extends _$FutureTasksInCategory {
 class TodayCompletedTasksInCategory extends _$TodayCompletedTasksInCategory {
   @override
   List<Task> build(int categoryId) {
-    final tasks = ref.watch(tasksNotifierProvider).valueOrNull;
+    final tasks = ref.watch(tasksProvider).value;
 
     if (tasks == null) {
       return [];
@@ -163,7 +162,7 @@ class YesterdayCompletedTasksInCategory
     extends _$YesterdayCompletedTasksInCategory {
   @override
   List<Task> build(int categoryId) {
-    final tasks = ref.watch(tasksNotifierProvider).valueOrNull;
+    final tasks = ref.watch(tasksProvider).value;
 
     if (tasks == null) {
       return [];
@@ -188,7 +187,7 @@ class YesterdayCompletedTasksInCategory
 class PastCompletedTasksInCategory extends _$PastCompletedTasksInCategory {
   @override
   List<Task> build(int categoryId) {
-    final tasks = ref.watch(tasksNotifierProvider).valueOrNull;
+    final tasks = ref.watch(tasksProvider).value;
 
     if (tasks == null) {
       return [];
@@ -215,7 +214,7 @@ class PastCompletedTasksInCategory extends _$PastCompletedTasksInCategory {
 
 @riverpod
 int numberOfAllActiveTasks(Ref ref) {
-  final tasks = ref.watch(tasksNotifierProvider).valueOrNull;
+  final tasks = ref.watch(tasksProvider).value;
 
   if (tasks == null) {
     return 0;
@@ -225,7 +224,7 @@ int numberOfAllActiveTasks(Ref ref) {
 
 @riverpod
 List<Task> uncategorizedTasks(Ref ref) {
-  final tasks = ref.watch(tasksNotifierProvider).valueOrNull;
+  final tasks = ref.watch(tasksProvider).value;
 
   if (tasks == null) {
     return [];
@@ -238,7 +237,7 @@ int numberOfActiveTasksInCategory(Ref ref, int? categoryId) {
   if (categoryId == null) {
     return 0;
   }
-  final tasks = ref.watch(tasksNotifierProvider).valueOrNull;
+  final tasks = ref.watch(tasksProvider).value;
 
   if (tasks == null) {
     return 0;
@@ -251,9 +250,9 @@ int numberOfActiveTasksInCategory(Ref ref, int? categoryId) {
 
 @riverpod
 double completionProgress(Ref ref, int categoryId) {
-  final tasks = ref.watch(tasksNotifierProvider);
+  final tasks = ref.watch(tasksProvider);
   final allTasksInCategory =
-      tasks.valueOrNull?.where((task) => task.categoryId == categoryId);
+      tasks.value?.where((task) => task.categoryId == categoryId);
   final completedTasksInCategory =
       allTasksInCategory?.where((task) => task.isDone);
   if (allTasksInCategory != null && allTasksInCategory.isNotEmpty) {
@@ -264,10 +263,10 @@ double completionProgress(Ref ref, int categoryId) {
 
 @riverpod
 Color appBackgroundColor(Ref ref) {
-  final currentCategory = ref.watch(categoryNotifierProvider);
+  final currentCategory = ref.watch(categoryProvider);
   final currentCategoryInList = ref
-      .watch(categoriesNotifierProvider)
-      .valueOrNull
+      .watch(categoriesProvider)
+      .value
       ?.firstWhereOrNull((element) => element.id == currentCategory?.id);
   return currentCategoryInList?.color ?? Colors.deepPurple;
 }

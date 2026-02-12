@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:purple_task/l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purple_task/core/constants/custom_styles.dart';
 import 'package:purple_task/core/ui/screens/main_screen/widgets/top_bar.dart';
@@ -97,17 +97,17 @@ class _NarrowLayoutState extends ConsumerState<NarrowLayout>
                     onPressed: () {
                       if (isUncategorizedViewPreferred) {
                         ref
-                            .read(settingsNotifierProvider.notifier)
+                            .read(settingsProvider.notifier)
                             .setUncategorizedViewPreference(value: false);
                         animationController.reverse();
                       } else {
                         animationController.forward().whenComplete(
                           () {
                             ref
-                                .read(settingsNotifierProvider.notifier)
+                                .read(settingsProvider.notifier)
                                 .setUncategorizedViewPreference(value: true);
                             ref
-                                .read(categoryNotifierProvider.notifier)
+                                .read(categoryProvider.notifier)
                                 .setCurrentCategory(null);
                           },
                         );

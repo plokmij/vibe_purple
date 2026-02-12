@@ -1,7 +1,7 @@
 import 'package:ant_icons/ant_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:purple_task/l10n/app_localizations.dart';
 import 'package:purple_task/core/constants/custom_styles.dart';
 
 class AddTaskField extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:ant_icons/ant_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:purple_task/l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purple_task/core/constants/custom_styles.dart';
 import 'package:purple_task/core/ui/screens/main_screen/widgets/top_bar.dart';
@@ -18,7 +18,7 @@ class WideLayout extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final currentCategory = ref.watch(categoryNotifierProvider);
+    final currentCategory = ref.watch(categoryProvider);
     final colorScheme = Theme.of(context).colorScheme;
 
     return Column(
@@ -110,7 +110,7 @@ class _UncategorizedCard extends ConsumerWidget {
     );
     return InkWell(
       onTap: () =>
-          ref.read(categoryNotifierProvider.notifier).setCurrentCategory(null),
+          ref.read(categoryProvider.notifier).setCurrentCategory(null),
       child: Transform.scale(
         scale: isSelected ? 1.03 : 1,
         child: Card(

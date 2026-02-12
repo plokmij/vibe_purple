@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:purple_task/l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purple_task/core/styles/providers/providers.dart';
 import 'package:purple_task/core/styles/themes.dart';
@@ -11,7 +11,7 @@ class ThemeSelector extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final tr = AppLocalizations.of(context);
-    final settingsState = ref.watch(settingsNotifierProvider);
+    final settingsState = ref.watch(settingsProvider);
     final themeController = ref.watch(appThemeProvider.notifier);
 
     String themeName(AppThemeMode? themeMode) {

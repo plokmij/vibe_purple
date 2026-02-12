@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:purple_task/l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purple_task/core/constants/custom_styles.dart';
 import 'package:purple_task/core/ui/widgets/animated_opacity_builder.dart';
@@ -55,8 +55,8 @@ class _CategoryScreenState extends ConsumerState<CategoryScreen>
   Widget build(BuildContext context) {
     final tr = AppLocalizations.of(context);
     final currentCategory = ref
-        .watch(categoriesNotifierProvider)
-        .valueOrNull
+        .watch(categoriesProvider)
+        .value
         ?.firstWhere((element) => element.id == widget.category.id);
     final activeTasksNumber =
         ref.watch(numberOfActiveTasksInCategoryProvider(currentCategory?.id));

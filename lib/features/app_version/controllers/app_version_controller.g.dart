@@ -6,20 +6,46 @@ part of 'app_version_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(AppVersion)
+final appVersionProvider = AppVersionProvider._();
+
+final class AppVersionProvider
+    extends $AsyncNotifierProvider<AppVersion, String?> {
+  AppVersionProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'appVersionProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$appVersionHash();
+
+  @$internal
+  @override
+  AppVersion create() => AppVersion();
+}
+
 String _$appVersionHash() => r'a5aa5a41e94ef72f144de7c9ade3bd4a3e218ad5';
 
-/// See also [AppVersion].
-@ProviderFor(AppVersion)
-final appVersionProvider =
-    AutoDisposeAsyncNotifierProvider<AppVersion, String?>.internal(
-  AppVersion.new,
-  name: r'appVersionProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$appVersionHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef _$AppVersion = AutoDisposeAsyncNotifier<String?>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+abstract class _$AppVersion extends $AsyncNotifier<String?> {
+  FutureOr<String?> build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<AsyncValue<String?>, String?>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<AsyncValue<String?>, String?>,
+        AsyncValue<String?>,
+        Object?,
+        Object?>;
+    element.handleCreate(ref, build);
+  }
+}

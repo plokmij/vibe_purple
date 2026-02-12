@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:purple_task/l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purple_task/core/constants/custom_styles.dart';
 import 'package:purple_task/core/helpers.dart';
@@ -18,8 +18,8 @@ class TaskItem extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final tr = AppLocalizations.of(context);
     final colorScheme = Theme.of(context).colorScheme;
-    final tasksController = ref.watch(tasksNotifierProvider.notifier);
-    final settings = ref.watch(settingsNotifierProvider);
+    final tasksController = ref.watch(tasksProvider.notifier);
+    final settings = ref.watch(settingsProvider);
     return Row(
       children: [
         Padding(

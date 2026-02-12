@@ -1,5 +1,5 @@
 import 'package:drift/drift.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_ce/hive.dart';
 import 'package:purple_task/core/database/app_database.dart' as db;
 import 'package:purple_task/core/hive_legacy/hive_entities/category_entity.dart';
 import 'package:purple_task/features/todos/daos/category_dao.dart';

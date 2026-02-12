@@ -16,9 +16,9 @@ class NewCategoryScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final newCategoryState = ref.watch(newCategoryNotifierProvider);
+    final newCategoryState = ref.watch(newCategoryProvider);
     final newCategoryController =
-        ref.watch(newCategoryNotifierProvider.notifier);
+        ref.watch(newCategoryProvider.notifier);
     return switch (newCategoryState.status) {
       NewCategoryStatus.initial =>
         CategoryInitial(color: newCategoryState.color),

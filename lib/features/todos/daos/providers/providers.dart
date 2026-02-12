@@ -1,4 +1,3 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purple_task/core/database/providers/providers.dart';
 import 'package:purple_task/features/todos/daos/category_dao.dart';
 import 'package:purple_task/features/todos/daos/task_dao.dart';

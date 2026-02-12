@@ -20,7 +20,7 @@ class PurpleAppTheme {
       waitDuration: const Duration(milliseconds: 600),
     ),
     dividerTheme: const DividerThemeData(color: Colors.grey),
-    dialogTheme: const DialogTheme(
+    dialogTheme: const DialogThemeData(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
@@ -77,7 +77,7 @@ class PurpleAppTheme {
       textColor: Color(0xFFE0E0E0),
       tileColor: Color(0xFF212121),
     ),
-    dialogTheme: const DialogTheme(
+    dialogTheme: const DialogThemeData(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(12)),
       ),

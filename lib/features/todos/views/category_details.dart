@@ -1,6 +1,6 @@
 import 'package:ant_icons/ant_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:purple_task/l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purple_task/features/todos/controllers/categories_controller.dart';
 import 'package:purple_task/features/todos/controllers/tasks_controller.dart';
@@ -27,8 +27,8 @@ class _CategoryDetailsState extends ConsumerState<CategoryDetails> {
   Widget build(BuildContext context) {
     final tr = AppLocalizations.of(context);
     final currentCategory = ref
-        .watch(categoriesNotifierProvider)
-        .valueOrNull
+        .watch(categoriesProvider)
+        .value
         ?.firstWhere((element) => element.id == widget.category.id);
 
     if (currentCategory == null) {
@@ -73,7 +73,7 @@ class _CategoryDetailsState extends ConsumerState<CategoryDetails> {
                 categoryId: currentCategory.id,
                 createTime: DateTime.now().millisecondsSinceEpoch,
               );
-              ref.read(tasksNotifierProvider.notifier).add(task: task);
+              ref.read(tasksProvider.notifier).add(task: task);
             },
           ),
         ),

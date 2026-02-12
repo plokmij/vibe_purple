@@ -6,21 +6,46 @@ part of 'tasks_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(TasksNotifier)
+final tasksProvider = TasksNotifierProvider._();
+
+final class TasksNotifierProvider
+    extends $AsyncNotifierProvider<TasksNotifier, List<Task>> {
+  TasksNotifierProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'tasksProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$tasksNotifierHash();
+
+  @$internal
+  @override
+  TasksNotifier create() => TasksNotifier();
+}
+
 String _$tasksNotifierHash() => r'0714384c545a2a55a3512e894d34cfe066fb70cb';
 
-/// See also [TasksNotifier].
-@ProviderFor(TasksNotifier)
-final tasksNotifierProvider =
-    AutoDisposeAsyncNotifierProvider<TasksNotifier, List<Task>>.internal(
-  TasksNotifier.new,
-  name: r'tasksNotifierProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$tasksNotifierHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef _$TasksNotifier = AutoDisposeAsyncNotifier<List<Task>>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+abstract class _$TasksNotifier extends $AsyncNotifier<List<Task>> {
+  FutureOr<List<Task>> build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<AsyncValue<List<Task>>, List<Task>>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<AsyncValue<List<Task>>, List<Task>>,
+        AsyncValue<List<Task>>,
+        Object?,
+        Object?>;
+    element.handleCreate(ref, build);
+  }
+}

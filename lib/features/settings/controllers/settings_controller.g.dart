@@ -6,21 +6,46 @@ part of 'settings_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(SettingsNotifier)
+final settingsProvider = SettingsNotifierProvider._();
+
+final class SettingsNotifierProvider
+    extends $AsyncNotifierProvider<SettingsNotifier, SettingsState> {
+  SettingsNotifierProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'settingsProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$settingsNotifierHash();
+
+  @$internal
+  @override
+  SettingsNotifier create() => SettingsNotifier();
+}
+
 String _$settingsNotifierHash() => r'fe05a1a14ad789fc6181ae6435e73c9b5403e5ab';
 
-/// See also [SettingsNotifier].
-@ProviderFor(SettingsNotifier)
-final settingsNotifierProvider =
-    AutoDisposeAsyncNotifierProvider<SettingsNotifier, SettingsState>.internal(
-  SettingsNotifier.new,
-  name: r'settingsNotifierProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$settingsNotifierHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef _$SettingsNotifier = AutoDisposeAsyncNotifier<SettingsState>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+abstract class _$SettingsNotifier extends $AsyncNotifier<SettingsState> {
+  FutureOr<SettingsState> build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<AsyncValue<SettingsState>, SettingsState>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<AsyncValue<SettingsState>, SettingsState>,
+        AsyncValue<SettingsState>,
+        Object?,
+        Object?>;
+    element.handleCreate(ref, build);
+  }
+}

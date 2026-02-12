@@ -8,7 +8,7 @@ part of 'category_entity.dart';
 
 class CategoryEntityAdapter extends TypeAdapter<CategoryEntity> {
   @override
-  final int typeId = 0;
+  final typeId = 0;
 
   @override
   CategoryEntity read(BinaryReader reader) {
@@ -18,9 +18,9 @@ class CategoryEntityAdapter extends TypeAdapter<CategoryEntity> {
     };
     return CategoryEntity(
       name: fields[0] as String,
-      color: fields[1] as int,
-      icon: fields[2] as int,
-      id: fields[3] as int,
+      color: (fields[1] as num).toInt(),
+      icon: (fields[2] as num).toInt(),
+      id: (fields[3] as num).toInt(),
     );
   }
 

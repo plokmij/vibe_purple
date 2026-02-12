@@ -6,22 +6,47 @@ part of 'categories_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(CategoriesNotifier)
+final categoriesProvider = CategoriesNotifierProvider._();
+
+final class CategoriesNotifierProvider
+    extends $AsyncNotifierProvider<CategoriesNotifier, List<Category>> {
+  CategoriesNotifierProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'categoriesProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$categoriesNotifierHash();
+
+  @$internal
+  @override
+  CategoriesNotifier create() => CategoriesNotifier();
+}
+
 String _$categoriesNotifierHash() =>
     r'8580b0c81c7dd87f2e887e607f8e6691d4b33d5d';
 
-/// See also [CategoriesNotifier].
-@ProviderFor(CategoriesNotifier)
-final categoriesNotifierProvider = AutoDisposeAsyncNotifierProvider<
-    CategoriesNotifier, List<Category>>.internal(
-  CategoriesNotifier.new,
-  name: r'categoriesNotifierProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$categoriesNotifierHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef _$CategoriesNotifier = AutoDisposeAsyncNotifier<List<Category>>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+abstract class _$CategoriesNotifier extends $AsyncNotifier<List<Category>> {
+  FutureOr<List<Category>> build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<AsyncValue<List<Category>>, List<Category>>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<AsyncValue<List<Category>>, List<Category>>,
+        AsyncValue<List<Category>>,
+        Object?,
+        Object?>;
+    element.handleCreate(ref, build);
+  }
+}

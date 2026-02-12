@@ -6,37 +6,87 @@ part of 'providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(taskDao)
+final taskDaoProvider = TaskDaoProvider._();
+
+final class TaskDaoProvider
+    extends $FunctionalProvider<TaskDao, TaskDao, TaskDao>
+    with $Provider<TaskDao> {
+  TaskDaoProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'taskDaoProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$taskDaoHash();
+
+  @$internal
+  @override
+  $ProviderElement<TaskDao> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  TaskDao create(Ref ref) {
+    return taskDao(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(TaskDao value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<TaskDao>(value),
+    );
+  }
+}
+
 String _$taskDaoHash() => r'075a41019fff31337f6241f20daec78db672e6c2';
 
-/// See also [taskDao].
-@ProviderFor(taskDao)
-final taskDaoProvider = AutoDisposeProvider<TaskDao>.internal(
-  taskDao,
-  name: r'taskDaoProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$taskDaoHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef TaskDaoRef = AutoDisposeProviderRef<TaskDao>;
-String _$categoryDaoHash() => r'5be907cf93b4ddb70c1cb8d526bbdeb452b99427';
-
-/// See also [categoryDao].
 @ProviderFor(categoryDao)
-final categoryDaoProvider = AutoDisposeProvider<CategoryDao>.internal(
-  categoryDao,
-  name: r'categoryDaoProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$categoryDaoHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+final categoryDaoProvider = CategoryDaoProvider._();
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef CategoryDaoRef = AutoDisposeProviderRef<CategoryDao>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+final class CategoryDaoProvider
+    extends $FunctionalProvider<CategoryDao, CategoryDao, CategoryDao>
+    with $Provider<CategoryDao> {
+  CategoryDaoProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'categoryDaoProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$categoryDaoHash();
+
+  @$internal
+  @override
+  $ProviderElement<CategoryDao> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  CategoryDao create(Ref ref) {
+    return categoryDao(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(CategoryDao value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<CategoryDao>(value),
+    );
+  }
+}
+
+String _$categoryDaoHash() => r'5be907cf93b4ddb70c1cb8d526bbdeb452b99427';

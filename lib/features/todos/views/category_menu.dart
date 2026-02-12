@@ -1,6 +1,6 @@
 import 'package:ant_icons/ant_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:purple_task/l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purple_task/core/ui/widgets/confirmation_dialog.dart';
 import 'package:purple_task/core/ui/widgets/text_change_confirmation_dialog.dart';
@@ -71,7 +71,7 @@ class _CategoryMenuState extends ConsumerState<CategoryMenu> {
               controller.close();
             } else {
               ref
-                  .read(categoryNotifierProvider.notifier)
+                  .read(categoryProvider.notifier)
                   .setCurrentCategory(widget.category);
               controller.open();
             }
@@ -86,7 +86,7 @@ class _CategoryMenuState extends ConsumerState<CategoryMenu> {
   }
 
   void onDeleteCompletedTasks() {
-    final category = ref.watch(categoryNotifierProvider)!;
+    final category = ref.watch(categoryProvider)!;
     final tr = AppLocalizations.of(context);
     showDialog<void>(
       context: context,
@@ -100,7 +100,7 @@ class _CategoryMenuState extends ConsumerState<CategoryMenu> {
         confirmationColor: Colors.red,
         onConfirm: () {
           ref
-              .read(tasksNotifierProvider.notifier)
+              .read(tasksProvider.notifier)
               .removeCompletedTasksForCategory(categoryId: category.id);
         },
       ),
@@ -108,7 +108,7 @@ class _CategoryMenuState extends ConsumerState<CategoryMenu> {
   }
 
   void onDeleteAllTasks() {
-    final category = ref.watch(categoryNotifierProvider)!;
+    final category = ref.watch(categoryProvider)!;
     final tr = AppLocalizations.of(context);
     showDialog<void>(
       context: context,
@@ -121,14 +121,14 @@ class _CategoryMenuState extends ConsumerState<CategoryMenu> {
         confirmationText: tr.delete,
         confirmationColor: Colors.red,
         onConfirm: () => ref
-            .read(tasksNotifierProvider.notifier)
+            .read(tasksProvider.notifier)
             .removeAllTasksForCategory(categoryId: category.id),
       ),
     );
   }
 
   void onDeleteCategory() {
-    final category = ref.watch(categoryNotifierProvider)!;
+    final category = ref.watch(categoryProvider)!;
     final tr = AppLocalizations.of(context);
 
     showDialog<void>(
@@ -143,20 +143,20 @@ class _CategoryMenuState extends ConsumerState<CategoryMenu> {
         confirmationColor: Colors.red,
         onConfirm: () {
           ref
-              .read(tasksNotifierProvider.notifier)
+              .read(tasksProvider.notifier)
               .removeAllTasksForCategory(categoryId: category.id);
           ref
-              .read(categoriesNotifierProvider.notifier)
+              .read(categoriesProvider.notifier)
               .removeCategory(categoryId: category.id);
           // remove category from current category state
-          ref.read(categoryNotifierProvider.notifier).setCurrentCategory(null);
+          ref.read(categoryProvider.notifier).setCurrentCategory(null);
         },
       ),
     );
   }
 
   void onChangeName() {
-    final category = ref.watch(categoryNotifierProvider)!;
+    final category = ref.watch(categoryProvider)!;
     final tr = AppLocalizations.of(context);
 
     showDialog<void>(
@@ -167,7 +167,7 @@ class _CategoryMenuState extends ConsumerState<CategoryMenu> {
           initialText: category.name,
           confirmationButtonText: tr.saveButton,
           onConfirm: (text) {
-            ref.read(categoryNotifierProvider.notifier)
+            ref.read(categoryProvider.notifier)
               ..changeName(name: text)
               ..update();
           },
@@ -182,7 +182,7 @@ class _CategoryMenuState extends ConsumerState<CategoryMenu> {
       builder: (_) {
         return Consumer(
           builder: (context, ref, _) {
-            final color = ref.watch(categoryNotifierProvider)!.color;
+            final color = ref.watch(categoryProvider)!.color;
             final tr = AppLocalizations.of(context);
 
             return ConfirmationDialog(
@@ -201,7 +201,7 @@ class _CategoryMenuState extends ConsumerState<CategoryMenu> {
                       child: ColorSelector(
                         selectedColor: color,
                         onSelect: ref
-                            .read(categoryNotifierProvider.notifier)
+                            .read(categoryProvider.notifier)
                             .changeColor,
                       ),
                     ),
@@ -209,7 +209,7 @@ class _CategoryMenuState extends ConsumerState<CategoryMenu> {
                 ),
               ),
               confirmationText: tr.saveButton,
-              onConfirm: ref.read(categoryNotifierProvider.notifier).update,
+              onConfirm: ref.read(categoryProvider.notifier).update,
             );
           },
         );
@@ -223,7 +223,7 @@ class _CategoryMenuState extends ConsumerState<CategoryMenu> {
       builder: (context) {
         return Consumer(
           builder: (context, ref, _) {
-            final category = ref.watch(categoryNotifierProvider)!;
+            final category = ref.watch(categoryProvider)!;
             final tr = AppLocalizations.of(context);
 
             final icon = category.icon;
@@ -248,7 +248,7 @@ class _CategoryMenuState extends ConsumerState<CategoryMenu> {
                       child: IconSelector(
                         selectedIcon: icon,
                         onSelect: ref
-                            .read(categoryNotifierProvider.notifier)
+                            .read(categoryProvider.notifier)
                             .changeIcon,
                       ),
                     ),
@@ -256,7 +256,7 @@ class _CategoryMenuState extends ConsumerState<CategoryMenu> {
                 ),
               ),
               confirmationText: tr.saveButton,
-              onConfirm: ref.read(categoryNotifierProvider.notifier).update,
+              onConfirm: ref.read(categoryProvider.notifier).update,
             );
           },
         );

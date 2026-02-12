@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:purple_task/l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purple_task/core/constants/custom_styles.dart';
 import 'package:purple_task/features/todos/controllers/new_category_controller.dart';
@@ -62,7 +62,7 @@ class CategoryIcon extends ConsumerWidget {
               child: IconSelector(
                 selectedIcon: selectedIcon,
                 onSelect:
-                    ref.read(newCategoryNotifierProvider.notifier).changeIcon,
+                    ref.read(newCategoryProvider.notifier).changeIcon,
               ),
             ),
             Padding(

@@ -12,7 +12,7 @@ void main() {
         ),
       ),
     );
-    final button = find.byType(TextButton);
+    final button = find.byType(FilledButton);
     expect(button, findsOneWidget);
   });
 
@@ -39,7 +39,7 @@ void main() {
         ),
       ),
     );
-    final button = find.byType(TextButton);
+    final button = find.byType(FilledButton);
     await tester.tap(button);
     expect(pressed, true);
   });

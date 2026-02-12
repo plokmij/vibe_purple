@@ -6,1544 +6,1068 @@ part of 'providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$numberOfAllActiveTasksHash() =>
-    r'719f041b69dcf6d7eb7a7c5c1685f3f9d37f1628';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [numberOfAllActiveTasks].
-@ProviderFor(numberOfAllActiveTasks)
-final numberOfAllActiveTasksProvider = AutoDisposeProvider<int>.internal(
-  numberOfAllActiveTasks,
-  name: r'numberOfAllActiveTasksProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$numberOfAllActiveTasksHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef NumberOfAllActiveTasksRef = AutoDisposeProviderRef<int>;
-String _$uncategorizedTasksHash() =>
-    r'4013d9e97aa3b92db43ebc03e1de7430fecea4e3';
-
-/// See also [uncategorizedTasks].
-@ProviderFor(uncategorizedTasks)
-final uncategorizedTasksProvider = AutoDisposeProvider<List<Task>>.internal(
-  uncategorizedTasks,
-  name: r'uncategorizedTasksProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$uncategorizedTasksHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef UncategorizedTasksRef = AutoDisposeProviderRef<List<Task>>;
-String _$numberOfActiveTasksInCategoryHash() =>
-    r'5117cb5433e813fcbe37446632c0763e38ff9a19';
-
-/// Copied from Dart SDK
-class _SystemHash {
-  _SystemHash._();
-
-  static int combine(int hash, int value) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + value);
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
-    return hash ^ (hash >> 6);
-  }
-
-  static int finish(int hash) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
-    // ignore: parameter_assignments
-    hash = hash ^ (hash >> 11);
-    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
-  }
-}
-
-/// See also [numberOfActiveTasksInCategory].
-@ProviderFor(numberOfActiveTasksInCategory)
-const numberOfActiveTasksInCategoryProvider =
-    NumberOfActiveTasksInCategoryFamily();
-
-/// See also [numberOfActiveTasksInCategory].
-class NumberOfActiveTasksInCategoryFamily extends Family<int> {
-  /// See also [numberOfActiveTasksInCategory].
-  const NumberOfActiveTasksInCategoryFamily();
-
-  /// See also [numberOfActiveTasksInCategory].
-  NumberOfActiveTasksInCategoryProvider call(
-    int? categoryId,
-  ) {
-    return NumberOfActiveTasksInCategoryProvider(
-      categoryId,
-    );
-  }
-
-  @override
-  NumberOfActiveTasksInCategoryProvider getProviderOverride(
-    covariant NumberOfActiveTasksInCategoryProvider provider,
-  ) {
-    return call(
-      provider.categoryId,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'numberOfActiveTasksInCategoryProvider';
-}
-
-/// See also [numberOfActiveTasksInCategory].
-class NumberOfActiveTasksInCategoryProvider extends AutoDisposeProvider<int> {
-  /// See also [numberOfActiveTasksInCategory].
-  NumberOfActiveTasksInCategoryProvider(
-    int? categoryId,
-  ) : this._internal(
-          (ref) => numberOfActiveTasksInCategory(
-            ref as NumberOfActiveTasksInCategoryRef,
-            categoryId,
-          ),
-          from: numberOfActiveTasksInCategoryProvider,
-          name: r'numberOfActiveTasksInCategoryProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$numberOfActiveTasksInCategoryHash,
-          dependencies: NumberOfActiveTasksInCategoryFamily._dependencies,
-          allTransitiveDependencies:
-              NumberOfActiveTasksInCategoryFamily._allTransitiveDependencies,
-          categoryId: categoryId,
-        );
-
-  NumberOfActiveTasksInCategoryProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.categoryId,
-  }) : super.internal();
-
-  final int? categoryId;
-
-  @override
-  Override overrideWith(
-    int Function(NumberOfActiveTasksInCategoryRef provider) create,
-  ) {
-    return ProviderOverride(
-      origin: this,
-      override: NumberOfActiveTasksInCategoryProvider._internal(
-        (ref) => create(ref as NumberOfActiveTasksInCategoryRef),
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        categoryId: categoryId,
-      ),
-    );
-  }
-
-  @override
-  AutoDisposeProviderElement<int> createElement() {
-    return _NumberOfActiveTasksInCategoryProviderElement(this);
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return other is NumberOfActiveTasksInCategoryProvider &&
-        other.categoryId == categoryId;
-  }
-
-  @override
-  int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, categoryId.hashCode);
-
-    return _SystemHash.finish(hash);
-  }
-}
-
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin NumberOfActiveTasksInCategoryRef on AutoDisposeProviderRef<int> {
-  /// The parameter `categoryId` of this provider.
-  int? get categoryId;
-}
-
-class _NumberOfActiveTasksInCategoryProviderElement
-    extends AutoDisposeProviderElement<int>
-    with NumberOfActiveTasksInCategoryRef {
-  _NumberOfActiveTasksInCategoryProviderElement(super.provider);
-
-  @override
-  int? get categoryId =>
-      (origin as NumberOfActiveTasksInCategoryProvider).categoryId;
-}
-
-String _$completionProgressHash() =>
-    r'1756a0d46961b8765f18fdca1869bd71f065e82d';
-
-/// See also [completionProgress].
-@ProviderFor(completionProgress)
-const completionProgressProvider = CompletionProgressFamily();
-
-/// See also [completionProgress].
-class CompletionProgressFamily extends Family<double> {
-  /// See also [completionProgress].
-  const CompletionProgressFamily();
-
-  /// See also [completionProgress].
-  CompletionProgressProvider call(
-    int categoryId,
-  ) {
-    return CompletionProgressProvider(
-      categoryId,
-    );
-  }
-
-  @override
-  CompletionProgressProvider getProviderOverride(
-    covariant CompletionProgressProvider provider,
-  ) {
-    return call(
-      provider.categoryId,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'completionProgressProvider';
-}
-
-/// See also [completionProgress].
-class CompletionProgressProvider extends AutoDisposeProvider<double> {
-  /// See also [completionProgress].
-  CompletionProgressProvider(
-    int categoryId,
-  ) : this._internal(
-          (ref) => completionProgress(
-            ref as CompletionProgressRef,
-            categoryId,
-          ),
-          from: completionProgressProvider,
-          name: r'completionProgressProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$completionProgressHash,
-          dependencies: CompletionProgressFamily._dependencies,
-          allTransitiveDependencies:
-              CompletionProgressFamily._allTransitiveDependencies,
-          categoryId: categoryId,
-        );
-
-  CompletionProgressProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.categoryId,
-  }) : super.internal();
-
-  final int categoryId;
-
-  @override
-  Override overrideWith(
-    double Function(CompletionProgressRef provider) create,
-  ) {
-    return ProviderOverride(
-      origin: this,
-      override: CompletionProgressProvider._internal(
-        (ref) => create(ref as CompletionProgressRef),
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        categoryId: categoryId,
-      ),
-    );
-  }
-
-  @override
-  AutoDisposeProviderElement<double> createElement() {
-    return _CompletionProgressProviderElement(this);
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return other is CompletionProgressProvider &&
-        other.categoryId == categoryId;
-  }
-
-  @override
-  int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, categoryId.hashCode);
-
-    return _SystemHash.finish(hash);
-  }
-}
-
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin CompletionProgressRef on AutoDisposeProviderRef<double> {
-  /// The parameter `categoryId` of this provider.
-  int get categoryId;
-}
-
-class _CompletionProgressProviderElement
-    extends AutoDisposeProviderElement<double> with CompletionProgressRef {
-  _CompletionProgressProviderElement(super.provider);
-
-  @override
-  int get categoryId => (origin as CompletionProgressProvider).categoryId;
-}
-
-String _$appBackgroundColorHash() =>
-    r'acbf96cc00128f489e688f83fea140e606ea9e00';
-
-/// See also [appBackgroundColor].
-@ProviderFor(appBackgroundColor)
-final appBackgroundColorProvider = AutoDisposeProvider<Color>.internal(
-  appBackgroundColor,
-  name: r'appBackgroundColorProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$appBackgroundColorHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef AppBackgroundColorRef = AutoDisposeProviderRef<Color>;
-String _$noDueDateTasksInCategoryHash() =>
-    r'955ab24c9ce07b80205d5ed9bb9528210c9265ca';
-
-abstract class _$NoDueDateTasksInCategory
-    extends BuildlessAutoDisposeNotifier<List<Task>> {
-  late final int categoryId;
-
-  List<Task> build(
-    int categoryId,
-  );
-}
-
-/// See also [NoDueDateTasksInCategory].
 @ProviderFor(NoDueDateTasksInCategory)
-const noDueDateTasksInCategoryProvider = NoDueDateTasksInCategoryFamily();
+final noDueDateTasksInCategoryProvider = NoDueDateTasksInCategoryFamily._();
 
-/// See also [NoDueDateTasksInCategory].
-class NoDueDateTasksInCategoryFamily extends Family<List<Task>> {
-  /// See also [NoDueDateTasksInCategory].
-  const NoDueDateTasksInCategoryFamily();
-
-  /// See also [NoDueDateTasksInCategory].
-  NoDueDateTasksInCategoryProvider call(
-    int categoryId,
-  ) {
-    return NoDueDateTasksInCategoryProvider(
-      categoryId,
-    );
-  }
-
-  @override
-  NoDueDateTasksInCategoryProvider getProviderOverride(
-    covariant NoDueDateTasksInCategoryProvider provider,
-  ) {
-    return call(
-      provider.categoryId,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'noDueDateTasksInCategoryProvider';
-}
-
-/// See also [NoDueDateTasksInCategory].
-class NoDueDateTasksInCategoryProvider extends AutoDisposeNotifierProviderImpl<
-    NoDueDateTasksInCategory, List<Task>> {
-  /// See also [NoDueDateTasksInCategory].
-  NoDueDateTasksInCategoryProvider(
-    int categoryId,
-  ) : this._internal(
-          () => NoDueDateTasksInCategory()..categoryId = categoryId,
-          from: noDueDateTasksInCategoryProvider,
+final class NoDueDateTasksInCategoryProvider
+    extends $NotifierProvider<NoDueDateTasksInCategory, List<Task>> {
+  NoDueDateTasksInCategoryProvider._(
+      {required NoDueDateTasksInCategoryFamily super.from,
+      required int super.argument})
+      : super(
+          retry: null,
           name: r'noDueDateTasksInCategoryProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$noDueDateTasksInCategoryHash,
-          dependencies: NoDueDateTasksInCategoryFamily._dependencies,
-          allTransitiveDependencies:
-              NoDueDateTasksInCategoryFamily._allTransitiveDependencies,
-          categoryId: categoryId,
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
         );
 
-  NoDueDateTasksInCategoryProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.categoryId,
-  }) : super.internal();
-
-  final int categoryId;
+  @override
+  String debugGetCreateSourceHash() => _$noDueDateTasksInCategoryHash();
 
   @override
-  List<Task> runNotifierBuild(
-    covariant NoDueDateTasksInCategory notifier,
-  ) {
-    return notifier.build(
-      categoryId,
-    );
+  String toString() {
+    return r'noDueDateTasksInCategoryProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  Override overrideWith(NoDueDateTasksInCategory Function() create) {
-    return ProviderOverride(
+  NoDueDateTasksInCategory create() => NoDueDateTasksInCategory();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(List<Task> value) {
+    return $ProviderOverride(
       origin: this,
-      override: NoDueDateTasksInCategoryProvider._internal(
-        () => create()..categoryId = categoryId,
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        categoryId: categoryId,
-      ),
+      providerOverride: $SyncValueProvider<List<Task>>(value),
     );
-  }
-
-  @override
-  AutoDisposeNotifierProviderElement<NoDueDateTasksInCategory, List<Task>>
-      createElement() {
-    return _NoDueDateTasksInCategoryProviderElement(this);
   }
 
   @override
   bool operator ==(Object other) {
     return other is NoDueDateTasksInCategoryProvider &&
-        other.categoryId == categoryId;
+        other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, categoryId.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin NoDueDateTasksInCategoryRef
-    on AutoDisposeNotifierProviderRef<List<Task>> {
-  /// The parameter `categoryId` of this provider.
-  int get categoryId;
-}
+String _$noDueDateTasksInCategoryHash() =>
+    r'955ab24c9ce07b80205d5ed9bb9528210c9265ca';
 
-class _NoDueDateTasksInCategoryProviderElement
-    extends AutoDisposeNotifierProviderElement<NoDueDateTasksInCategory,
-        List<Task>> with NoDueDateTasksInCategoryRef {
-  _NoDueDateTasksInCategoryProviderElement(super.provider);
+final class NoDueDateTasksInCategoryFamily extends $Family
+    with
+        $ClassFamilyOverride<NoDueDateTasksInCategory, List<Task>, List<Task>,
+            List<Task>, int> {
+  NoDueDateTasksInCategoryFamily._()
+      : super(
+          retry: null,
+          name: r'noDueDateTasksInCategoryProvider',
+          dependencies: null,
+          $allTransitiveDependencies: null,
+          isAutoDispose: true,
+        );
+
+  NoDueDateTasksInCategoryProvider call(
+    int categoryId,
+  ) =>
+      NoDueDateTasksInCategoryProvider._(argument: categoryId, from: this);
 
   @override
-  int get categoryId => (origin as NoDueDateTasksInCategoryProvider).categoryId;
+  String toString() => r'noDueDateTasksInCategoryProvider';
 }
 
-String _$overdueTasksInCategoryHash() =>
-    r'e3bb599b9baab91c01b406ed38f8c35b772163e8';
-
-abstract class _$OverdueTasksInCategory
-    extends BuildlessAutoDisposeNotifier<List<Task>> {
-  late final int categoryId;
+abstract class _$NoDueDateTasksInCategory extends $Notifier<List<Task>> {
+  late final _$args = ref.$arg as int;
+  int get categoryId => _$args;
 
   List<Task> build(
     int categoryId,
   );
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<List<Task>, List<Task>>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<List<Task>, List<Task>>, List<Task>, Object?, Object?>;
+    element.handleCreate(
+        ref,
+        () => build(
+              _$args,
+            ));
+  }
 }
 
-/// See also [OverdueTasksInCategory].
 @ProviderFor(OverdueTasksInCategory)
-const overdueTasksInCategoryProvider = OverdueTasksInCategoryFamily();
+final overdueTasksInCategoryProvider = OverdueTasksInCategoryFamily._();
 
-/// See also [OverdueTasksInCategory].
-class OverdueTasksInCategoryFamily extends Family<List<Task>> {
-  /// See also [OverdueTasksInCategory].
-  const OverdueTasksInCategoryFamily();
-
-  /// See also [OverdueTasksInCategory].
-  OverdueTasksInCategoryProvider call(
-    int categoryId,
-  ) {
-    return OverdueTasksInCategoryProvider(
-      categoryId,
-    );
-  }
-
-  @override
-  OverdueTasksInCategoryProvider getProviderOverride(
-    covariant OverdueTasksInCategoryProvider provider,
-  ) {
-    return call(
-      provider.categoryId,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'overdueTasksInCategoryProvider';
-}
-
-/// See also [OverdueTasksInCategory].
-class OverdueTasksInCategoryProvider extends AutoDisposeNotifierProviderImpl<
-    OverdueTasksInCategory, List<Task>> {
-  /// See also [OverdueTasksInCategory].
-  OverdueTasksInCategoryProvider(
-    int categoryId,
-  ) : this._internal(
-          () => OverdueTasksInCategory()..categoryId = categoryId,
-          from: overdueTasksInCategoryProvider,
+final class OverdueTasksInCategoryProvider
+    extends $NotifierProvider<OverdueTasksInCategory, List<Task>> {
+  OverdueTasksInCategoryProvider._(
+      {required OverdueTasksInCategoryFamily super.from,
+      required int super.argument})
+      : super(
+          retry: null,
           name: r'overdueTasksInCategoryProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$overdueTasksInCategoryHash,
-          dependencies: OverdueTasksInCategoryFamily._dependencies,
-          allTransitiveDependencies:
-              OverdueTasksInCategoryFamily._allTransitiveDependencies,
-          categoryId: categoryId,
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
         );
 
-  OverdueTasksInCategoryProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.categoryId,
-  }) : super.internal();
-
-  final int categoryId;
+  @override
+  String debugGetCreateSourceHash() => _$overdueTasksInCategoryHash();
 
   @override
-  List<Task> runNotifierBuild(
-    covariant OverdueTasksInCategory notifier,
-  ) {
-    return notifier.build(
-      categoryId,
-    );
+  String toString() {
+    return r'overdueTasksInCategoryProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  Override overrideWith(OverdueTasksInCategory Function() create) {
-    return ProviderOverride(
+  OverdueTasksInCategory create() => OverdueTasksInCategory();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(List<Task> value) {
+    return $ProviderOverride(
       origin: this,
-      override: OverdueTasksInCategoryProvider._internal(
-        () => create()..categoryId = categoryId,
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        categoryId: categoryId,
-      ),
+      providerOverride: $SyncValueProvider<List<Task>>(value),
     );
-  }
-
-  @override
-  AutoDisposeNotifierProviderElement<OverdueTasksInCategory, List<Task>>
-      createElement() {
-    return _OverdueTasksInCategoryProviderElement(this);
   }
 
   @override
   bool operator ==(Object other) {
     return other is OverdueTasksInCategoryProvider &&
-        other.categoryId == categoryId;
+        other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, categoryId.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin OverdueTasksInCategoryRef on AutoDisposeNotifierProviderRef<List<Task>> {
-  /// The parameter `categoryId` of this provider.
-  int get categoryId;
-}
+String _$overdueTasksInCategoryHash() =>
+    r'e3bb599b9baab91c01b406ed38f8c35b772163e8';
 
-class _OverdueTasksInCategoryProviderElement
-    extends AutoDisposeNotifierProviderElement<OverdueTasksInCategory,
-        List<Task>> with OverdueTasksInCategoryRef {
-  _OverdueTasksInCategoryProviderElement(super.provider);
+final class OverdueTasksInCategoryFamily extends $Family
+    with
+        $ClassFamilyOverride<OverdueTasksInCategory, List<Task>, List<Task>,
+            List<Task>, int> {
+  OverdueTasksInCategoryFamily._()
+      : super(
+          retry: null,
+          name: r'overdueTasksInCategoryProvider',
+          dependencies: null,
+          $allTransitiveDependencies: null,
+          isAutoDispose: true,
+        );
+
+  OverdueTasksInCategoryProvider call(
+    int categoryId,
+  ) =>
+      OverdueTasksInCategoryProvider._(argument: categoryId, from: this);
 
   @override
-  int get categoryId => (origin as OverdueTasksInCategoryProvider).categoryId;
+  String toString() => r'overdueTasksInCategoryProvider';
+}
+
+abstract class _$OverdueTasksInCategory extends $Notifier<List<Task>> {
+  late final _$args = ref.$arg as int;
+  int get categoryId => _$args;
+
+  List<Task> build(
+    int categoryId,
+  );
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<List<Task>, List<Task>>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<List<Task>, List<Task>>, List<Task>, Object?, Object?>;
+    element.handleCreate(
+        ref,
+        () => build(
+              _$args,
+            ));
+  }
+}
+
+@ProviderFor(TodayTasksInCategory)
+final todayTasksInCategoryProvider = TodayTasksInCategoryFamily._();
+
+final class TodayTasksInCategoryProvider
+    extends $NotifierProvider<TodayTasksInCategory, List<Task>> {
+  TodayTasksInCategoryProvider._(
+      {required TodayTasksInCategoryFamily super.from,
+      required int super.argument})
+      : super(
+          retry: null,
+          name: r'todayTasksInCategoryProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$todayTasksInCategoryHash();
+
+  @override
+  String toString() {
+    return r'todayTasksInCategoryProvider'
+        ''
+        '($argument)';
+  }
+
+  @$internal
+  @override
+  TodayTasksInCategory create() => TodayTasksInCategory();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(List<Task> value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<List<Task>>(value),
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is TodayTasksInCategoryProvider && other.argument == argument;
+  }
+
+  @override
+  int get hashCode {
+    return argument.hashCode;
+  }
 }
 
 String _$todayTasksInCategoryHash() =>
     r'11593ab944967b182bd816511867af5510768714';
 
-abstract class _$TodayTasksInCategory
-    extends BuildlessAutoDisposeNotifier<List<Task>> {
-  late final int categoryId;
+final class TodayTasksInCategoryFamily extends $Family
+    with
+        $ClassFamilyOverride<TodayTasksInCategory, List<Task>, List<Task>,
+            List<Task>, int> {
+  TodayTasksInCategoryFamily._()
+      : super(
+          retry: null,
+          name: r'todayTasksInCategoryProvider',
+          dependencies: null,
+          $allTransitiveDependencies: null,
+          isAutoDispose: true,
+        );
 
-  List<Task> build(
-    int categoryId,
-  );
-}
-
-/// See also [TodayTasksInCategory].
-@ProviderFor(TodayTasksInCategory)
-const todayTasksInCategoryProvider = TodayTasksInCategoryFamily();
-
-/// See also [TodayTasksInCategory].
-class TodayTasksInCategoryFamily extends Family<List<Task>> {
-  /// See also [TodayTasksInCategory].
-  const TodayTasksInCategoryFamily();
-
-  /// See also [TodayTasksInCategory].
   TodayTasksInCategoryProvider call(
     int categoryId,
-  ) {
-    return TodayTasksInCategoryProvider(
-      categoryId,
-    );
-  }
+  ) =>
+      TodayTasksInCategoryProvider._(argument: categoryId, from: this);
 
   @override
-  TodayTasksInCategoryProvider getProviderOverride(
-    covariant TodayTasksInCategoryProvider provider,
-  ) {
-    return call(
-      provider.categoryId,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'todayTasksInCategoryProvider';
+  String toString() => r'todayTasksInCategoryProvider';
 }
 
-/// See also [TodayTasksInCategory].
-class TodayTasksInCategoryProvider
-    extends AutoDisposeNotifierProviderImpl<TodayTasksInCategory, List<Task>> {
-  /// See also [TodayTasksInCategory].
-  TodayTasksInCategoryProvider(
-    int categoryId,
-  ) : this._internal(
-          () => TodayTasksInCategory()..categoryId = categoryId,
-          from: todayTasksInCategoryProvider,
-          name: r'todayTasksInCategoryProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$todayTasksInCategoryHash,
-          dependencies: TodayTasksInCategoryFamily._dependencies,
-          allTransitiveDependencies:
-              TodayTasksInCategoryFamily._allTransitiveDependencies,
-          categoryId: categoryId,
-        );
-
-  TodayTasksInCategoryProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.categoryId,
-  }) : super.internal();
-
-  final int categoryId;
-
-  @override
-  List<Task> runNotifierBuild(
-    covariant TodayTasksInCategory notifier,
-  ) {
-    return notifier.build(
-      categoryId,
-    );
-  }
-
-  @override
-  Override overrideWith(TodayTasksInCategory Function() create) {
-    return ProviderOverride(
-      origin: this,
-      override: TodayTasksInCategoryProvider._internal(
-        () => create()..categoryId = categoryId,
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        categoryId: categoryId,
-      ),
-    );
-  }
-
-  @override
-  AutoDisposeNotifierProviderElement<TodayTasksInCategory, List<Task>>
-      createElement() {
-    return _TodayTasksInCategoryProviderElement(this);
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return other is TodayTasksInCategoryProvider &&
-        other.categoryId == categoryId;
-  }
-
-  @override
-  int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, categoryId.hashCode);
-
-    return _SystemHash.finish(hash);
-  }
-}
-
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin TodayTasksInCategoryRef on AutoDisposeNotifierProviderRef<List<Task>> {
-  /// The parameter `categoryId` of this provider.
-  int get categoryId;
-}
-
-class _TodayTasksInCategoryProviderElement
-    extends AutoDisposeNotifierProviderElement<TodayTasksInCategory, List<Task>>
-    with TodayTasksInCategoryRef {
-  _TodayTasksInCategoryProviderElement(super.provider);
-
-  @override
-  int get categoryId => (origin as TodayTasksInCategoryProvider).categoryId;
-}
-
-String _$tomorrowTasksInCategoryHash() =>
-    r'98f7e318b5401e0f31bac981dce51e9d034fa361';
-
-abstract class _$TomorrowTasksInCategory
-    extends BuildlessAutoDisposeNotifier<List<Task>> {
-  late final int categoryId;
+abstract class _$TodayTasksInCategory extends $Notifier<List<Task>> {
+  late final _$args = ref.$arg as int;
+  int get categoryId => _$args;
 
   List<Task> build(
     int categoryId,
   );
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<List<Task>, List<Task>>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<List<Task>, List<Task>>, List<Task>, Object?, Object?>;
+    element.handleCreate(
+        ref,
+        () => build(
+              _$args,
+            ));
+  }
 }
 
-/// See also [TomorrowTasksInCategory].
 @ProviderFor(TomorrowTasksInCategory)
-const tomorrowTasksInCategoryProvider = TomorrowTasksInCategoryFamily();
+final tomorrowTasksInCategoryProvider = TomorrowTasksInCategoryFamily._();
 
-/// See also [TomorrowTasksInCategory].
-class TomorrowTasksInCategoryFamily extends Family<List<Task>> {
-  /// See also [TomorrowTasksInCategory].
-  const TomorrowTasksInCategoryFamily();
-
-  /// See also [TomorrowTasksInCategory].
-  TomorrowTasksInCategoryProvider call(
-    int categoryId,
-  ) {
-    return TomorrowTasksInCategoryProvider(
-      categoryId,
-    );
-  }
-
-  @override
-  TomorrowTasksInCategoryProvider getProviderOverride(
-    covariant TomorrowTasksInCategoryProvider provider,
-  ) {
-    return call(
-      provider.categoryId,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'tomorrowTasksInCategoryProvider';
-}
-
-/// See also [TomorrowTasksInCategory].
-class TomorrowTasksInCategoryProvider extends AutoDisposeNotifierProviderImpl<
-    TomorrowTasksInCategory, List<Task>> {
-  /// See also [TomorrowTasksInCategory].
-  TomorrowTasksInCategoryProvider(
-    int categoryId,
-  ) : this._internal(
-          () => TomorrowTasksInCategory()..categoryId = categoryId,
-          from: tomorrowTasksInCategoryProvider,
+final class TomorrowTasksInCategoryProvider
+    extends $NotifierProvider<TomorrowTasksInCategory, List<Task>> {
+  TomorrowTasksInCategoryProvider._(
+      {required TomorrowTasksInCategoryFamily super.from,
+      required int super.argument})
+      : super(
+          retry: null,
           name: r'tomorrowTasksInCategoryProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$tomorrowTasksInCategoryHash,
-          dependencies: TomorrowTasksInCategoryFamily._dependencies,
-          allTransitiveDependencies:
-              TomorrowTasksInCategoryFamily._allTransitiveDependencies,
-          categoryId: categoryId,
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
         );
 
-  TomorrowTasksInCategoryProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.categoryId,
-  }) : super.internal();
-
-  final int categoryId;
+  @override
+  String debugGetCreateSourceHash() => _$tomorrowTasksInCategoryHash();
 
   @override
-  List<Task> runNotifierBuild(
-    covariant TomorrowTasksInCategory notifier,
-  ) {
-    return notifier.build(
-      categoryId,
-    );
+  String toString() {
+    return r'tomorrowTasksInCategoryProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  Override overrideWith(TomorrowTasksInCategory Function() create) {
-    return ProviderOverride(
+  TomorrowTasksInCategory create() => TomorrowTasksInCategory();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(List<Task> value) {
+    return $ProviderOverride(
       origin: this,
-      override: TomorrowTasksInCategoryProvider._internal(
-        () => create()..categoryId = categoryId,
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        categoryId: categoryId,
-      ),
+      providerOverride: $SyncValueProvider<List<Task>>(value),
     );
-  }
-
-  @override
-  AutoDisposeNotifierProviderElement<TomorrowTasksInCategory, List<Task>>
-      createElement() {
-    return _TomorrowTasksInCategoryProviderElement(this);
   }
 
   @override
   bool operator ==(Object other) {
     return other is TomorrowTasksInCategoryProvider &&
-        other.categoryId == categoryId;
+        other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, categoryId.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin TomorrowTasksInCategoryRef on AutoDisposeNotifierProviderRef<List<Task>> {
-  /// The parameter `categoryId` of this provider.
-  int get categoryId;
-}
+String _$tomorrowTasksInCategoryHash() =>
+    r'98f7e318b5401e0f31bac981dce51e9d034fa361';
 
-class _TomorrowTasksInCategoryProviderElement
-    extends AutoDisposeNotifierProviderElement<TomorrowTasksInCategory,
-        List<Task>> with TomorrowTasksInCategoryRef {
-  _TomorrowTasksInCategoryProviderElement(super.provider);
+final class TomorrowTasksInCategoryFamily extends $Family
+    with
+        $ClassFamilyOverride<TomorrowTasksInCategory, List<Task>, List<Task>,
+            List<Task>, int> {
+  TomorrowTasksInCategoryFamily._()
+      : super(
+          retry: null,
+          name: r'tomorrowTasksInCategoryProvider',
+          dependencies: null,
+          $allTransitiveDependencies: null,
+          isAutoDispose: true,
+        );
+
+  TomorrowTasksInCategoryProvider call(
+    int categoryId,
+  ) =>
+      TomorrowTasksInCategoryProvider._(argument: categoryId, from: this);
 
   @override
-  int get categoryId => (origin as TomorrowTasksInCategoryProvider).categoryId;
+  String toString() => r'tomorrowTasksInCategoryProvider';
+}
+
+abstract class _$TomorrowTasksInCategory extends $Notifier<List<Task>> {
+  late final _$args = ref.$arg as int;
+  int get categoryId => _$args;
+
+  List<Task> build(
+    int categoryId,
+  );
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<List<Task>, List<Task>>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<List<Task>, List<Task>>, List<Task>, Object?, Object?>;
+    element.handleCreate(
+        ref,
+        () => build(
+              _$args,
+            ));
+  }
+}
+
+@ProviderFor(FutureTasksInCategory)
+final futureTasksInCategoryProvider = FutureTasksInCategoryFamily._();
+
+final class FutureTasksInCategoryProvider
+    extends $NotifierProvider<FutureTasksInCategory, List<Task>> {
+  FutureTasksInCategoryProvider._(
+      {required FutureTasksInCategoryFamily super.from,
+      required int super.argument})
+      : super(
+          retry: null,
+          name: r'futureTasksInCategoryProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$futureTasksInCategoryHash();
+
+  @override
+  String toString() {
+    return r'futureTasksInCategoryProvider'
+        ''
+        '($argument)';
+  }
+
+  @$internal
+  @override
+  FutureTasksInCategory create() => FutureTasksInCategory();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(List<Task> value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<List<Task>>(value),
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is FutureTasksInCategoryProvider && other.argument == argument;
+  }
+
+  @override
+  int get hashCode {
+    return argument.hashCode;
+  }
 }
 
 String _$futureTasksInCategoryHash() =>
     r'b41e361f4f1543603ffcbc89c642a0632fd0bea6';
 
-abstract class _$FutureTasksInCategory
-    extends BuildlessAutoDisposeNotifier<List<Task>> {
-  late final int categoryId;
+final class FutureTasksInCategoryFamily extends $Family
+    with
+        $ClassFamilyOverride<FutureTasksInCategory, List<Task>, List<Task>,
+            List<Task>, int> {
+  FutureTasksInCategoryFamily._()
+      : super(
+          retry: null,
+          name: r'futureTasksInCategoryProvider',
+          dependencies: null,
+          $allTransitiveDependencies: null,
+          isAutoDispose: true,
+        );
 
-  List<Task> build(
-    int categoryId,
-  );
-}
-
-/// See also [FutureTasksInCategory].
-@ProviderFor(FutureTasksInCategory)
-const futureTasksInCategoryProvider = FutureTasksInCategoryFamily();
-
-/// See also [FutureTasksInCategory].
-class FutureTasksInCategoryFamily extends Family<List<Task>> {
-  /// See also [FutureTasksInCategory].
-  const FutureTasksInCategoryFamily();
-
-  /// See also [FutureTasksInCategory].
   FutureTasksInCategoryProvider call(
     int categoryId,
-  ) {
-    return FutureTasksInCategoryProvider(
-      categoryId,
-    );
-  }
+  ) =>
+      FutureTasksInCategoryProvider._(argument: categoryId, from: this);
 
   @override
-  FutureTasksInCategoryProvider getProviderOverride(
-    covariant FutureTasksInCategoryProvider provider,
-  ) {
-    return call(
-      provider.categoryId,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'futureTasksInCategoryProvider';
+  String toString() => r'futureTasksInCategoryProvider';
 }
 
-/// See also [FutureTasksInCategory].
-class FutureTasksInCategoryProvider
-    extends AutoDisposeNotifierProviderImpl<FutureTasksInCategory, List<Task>> {
-  /// See also [FutureTasksInCategory].
-  FutureTasksInCategoryProvider(
-    int categoryId,
-  ) : this._internal(
-          () => FutureTasksInCategory()..categoryId = categoryId,
-          from: futureTasksInCategoryProvider,
-          name: r'futureTasksInCategoryProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$futureTasksInCategoryHash,
-          dependencies: FutureTasksInCategoryFamily._dependencies,
-          allTransitiveDependencies:
-              FutureTasksInCategoryFamily._allTransitiveDependencies,
-          categoryId: categoryId,
-        );
-
-  FutureTasksInCategoryProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.categoryId,
-  }) : super.internal();
-
-  final int categoryId;
-
-  @override
-  List<Task> runNotifierBuild(
-    covariant FutureTasksInCategory notifier,
-  ) {
-    return notifier.build(
-      categoryId,
-    );
-  }
-
-  @override
-  Override overrideWith(FutureTasksInCategory Function() create) {
-    return ProviderOverride(
-      origin: this,
-      override: FutureTasksInCategoryProvider._internal(
-        () => create()..categoryId = categoryId,
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        categoryId: categoryId,
-      ),
-    );
-  }
-
-  @override
-  AutoDisposeNotifierProviderElement<FutureTasksInCategory, List<Task>>
-      createElement() {
-    return _FutureTasksInCategoryProviderElement(this);
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return other is FutureTasksInCategoryProvider &&
-        other.categoryId == categoryId;
-  }
-
-  @override
-  int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, categoryId.hashCode);
-
-    return _SystemHash.finish(hash);
-  }
-}
-
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin FutureTasksInCategoryRef on AutoDisposeNotifierProviderRef<List<Task>> {
-  /// The parameter `categoryId` of this provider.
-  int get categoryId;
-}
-
-class _FutureTasksInCategoryProviderElement
-    extends AutoDisposeNotifierProviderElement<FutureTasksInCategory,
-        List<Task>> with FutureTasksInCategoryRef {
-  _FutureTasksInCategoryProviderElement(super.provider);
-
-  @override
-  int get categoryId => (origin as FutureTasksInCategoryProvider).categoryId;
-}
-
-String _$todayCompletedTasksInCategoryHash() =>
-    r'a847508c52907d12eeaf8a39e5b149191d3e50f9';
-
-abstract class _$TodayCompletedTasksInCategory
-    extends BuildlessAutoDisposeNotifier<List<Task>> {
-  late final int categoryId;
+abstract class _$FutureTasksInCategory extends $Notifier<List<Task>> {
+  late final _$args = ref.$arg as int;
+  int get categoryId => _$args;
 
   List<Task> build(
     int categoryId,
   );
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<List<Task>, List<Task>>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<List<Task>, List<Task>>, List<Task>, Object?, Object?>;
+    element.handleCreate(
+        ref,
+        () => build(
+              _$args,
+            ));
+  }
 }
 
-/// See also [TodayCompletedTasksInCategory].
 @ProviderFor(TodayCompletedTasksInCategory)
-const todayCompletedTasksInCategoryProvider =
-    TodayCompletedTasksInCategoryFamily();
+final todayCompletedTasksInCategoryProvider =
+    TodayCompletedTasksInCategoryFamily._();
 
-/// See also [TodayCompletedTasksInCategory].
-class TodayCompletedTasksInCategoryFamily extends Family<List<Task>> {
-  /// See also [TodayCompletedTasksInCategory].
-  const TodayCompletedTasksInCategoryFamily();
-
-  /// See also [TodayCompletedTasksInCategory].
-  TodayCompletedTasksInCategoryProvider call(
-    int categoryId,
-  ) {
-    return TodayCompletedTasksInCategoryProvider(
-      categoryId,
-    );
-  }
-
-  @override
-  TodayCompletedTasksInCategoryProvider getProviderOverride(
-    covariant TodayCompletedTasksInCategoryProvider provider,
-  ) {
-    return call(
-      provider.categoryId,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'todayCompletedTasksInCategoryProvider';
-}
-
-/// See also [TodayCompletedTasksInCategory].
-class TodayCompletedTasksInCategoryProvider
-    extends AutoDisposeNotifierProviderImpl<TodayCompletedTasksInCategory,
-        List<Task>> {
-  /// See also [TodayCompletedTasksInCategory].
-  TodayCompletedTasksInCategoryProvider(
-    int categoryId,
-  ) : this._internal(
-          () => TodayCompletedTasksInCategory()..categoryId = categoryId,
-          from: todayCompletedTasksInCategoryProvider,
+final class TodayCompletedTasksInCategoryProvider
+    extends $NotifierProvider<TodayCompletedTasksInCategory, List<Task>> {
+  TodayCompletedTasksInCategoryProvider._(
+      {required TodayCompletedTasksInCategoryFamily super.from,
+      required int super.argument})
+      : super(
+          retry: null,
           name: r'todayCompletedTasksInCategoryProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$todayCompletedTasksInCategoryHash,
-          dependencies: TodayCompletedTasksInCategoryFamily._dependencies,
-          allTransitiveDependencies:
-              TodayCompletedTasksInCategoryFamily._allTransitiveDependencies,
-          categoryId: categoryId,
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
         );
 
-  TodayCompletedTasksInCategoryProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.categoryId,
-  }) : super.internal();
-
-  final int categoryId;
+  @override
+  String debugGetCreateSourceHash() => _$todayCompletedTasksInCategoryHash();
 
   @override
-  List<Task> runNotifierBuild(
-    covariant TodayCompletedTasksInCategory notifier,
-  ) {
-    return notifier.build(
-      categoryId,
-    );
+  String toString() {
+    return r'todayCompletedTasksInCategoryProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  Override overrideWith(TodayCompletedTasksInCategory Function() create) {
-    return ProviderOverride(
+  TodayCompletedTasksInCategory create() => TodayCompletedTasksInCategory();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(List<Task> value) {
+    return $ProviderOverride(
       origin: this,
-      override: TodayCompletedTasksInCategoryProvider._internal(
-        () => create()..categoryId = categoryId,
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        categoryId: categoryId,
-      ),
+      providerOverride: $SyncValueProvider<List<Task>>(value),
     );
-  }
-
-  @override
-  AutoDisposeNotifierProviderElement<TodayCompletedTasksInCategory, List<Task>>
-      createElement() {
-    return _TodayCompletedTasksInCategoryProviderElement(this);
   }
 
   @override
   bool operator ==(Object other) {
     return other is TodayCompletedTasksInCategoryProvider &&
-        other.categoryId == categoryId;
+        other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, categoryId.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin TodayCompletedTasksInCategoryRef
-    on AutoDisposeNotifierProviderRef<List<Task>> {
-  /// The parameter `categoryId` of this provider.
-  int get categoryId;
-}
+String _$todayCompletedTasksInCategoryHash() =>
+    r'a847508c52907d12eeaf8a39e5b149191d3e50f9';
 
-class _TodayCompletedTasksInCategoryProviderElement
-    extends AutoDisposeNotifierProviderElement<TodayCompletedTasksInCategory,
-        List<Task>> with TodayCompletedTasksInCategoryRef {
-  _TodayCompletedTasksInCategoryProviderElement(super.provider);
+final class TodayCompletedTasksInCategoryFamily extends $Family
+    with
+        $ClassFamilyOverride<TodayCompletedTasksInCategory, List<Task>,
+            List<Task>, List<Task>, int> {
+  TodayCompletedTasksInCategoryFamily._()
+      : super(
+          retry: null,
+          name: r'todayCompletedTasksInCategoryProvider',
+          dependencies: null,
+          $allTransitiveDependencies: null,
+          isAutoDispose: true,
+        );
+
+  TodayCompletedTasksInCategoryProvider call(
+    int categoryId,
+  ) =>
+      TodayCompletedTasksInCategoryProvider._(argument: categoryId, from: this);
 
   @override
-  int get categoryId =>
-      (origin as TodayCompletedTasksInCategoryProvider).categoryId;
+  String toString() => r'todayCompletedTasksInCategoryProvider';
 }
 
-String _$yesterdayCompletedTasksInCategoryHash() =>
-    r'7d280bd054d3afb9bb0736a4abdbba186b396974';
-
-abstract class _$YesterdayCompletedTasksInCategory
-    extends BuildlessAutoDisposeNotifier<List<Task>> {
-  late final int categoryId;
+abstract class _$TodayCompletedTasksInCategory extends $Notifier<List<Task>> {
+  late final _$args = ref.$arg as int;
+  int get categoryId => _$args;
 
   List<Task> build(
     int categoryId,
   );
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<List<Task>, List<Task>>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<List<Task>, List<Task>>, List<Task>, Object?, Object?>;
+    element.handleCreate(
+        ref,
+        () => build(
+              _$args,
+            ));
+  }
 }
 
-/// See also [YesterdayCompletedTasksInCategory].
 @ProviderFor(YesterdayCompletedTasksInCategory)
-const yesterdayCompletedTasksInCategoryProvider =
-    YesterdayCompletedTasksInCategoryFamily();
+final yesterdayCompletedTasksInCategoryProvider =
+    YesterdayCompletedTasksInCategoryFamily._();
 
-/// See also [YesterdayCompletedTasksInCategory].
-class YesterdayCompletedTasksInCategoryFamily extends Family<List<Task>> {
-  /// See also [YesterdayCompletedTasksInCategory].
-  const YesterdayCompletedTasksInCategoryFamily();
-
-  /// See also [YesterdayCompletedTasksInCategory].
-  YesterdayCompletedTasksInCategoryProvider call(
-    int categoryId,
-  ) {
-    return YesterdayCompletedTasksInCategoryProvider(
-      categoryId,
-    );
-  }
-
-  @override
-  YesterdayCompletedTasksInCategoryProvider getProviderOverride(
-    covariant YesterdayCompletedTasksInCategoryProvider provider,
-  ) {
-    return call(
-      provider.categoryId,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'yesterdayCompletedTasksInCategoryProvider';
-}
-
-/// See also [YesterdayCompletedTasksInCategory].
-class YesterdayCompletedTasksInCategoryProvider
-    extends AutoDisposeNotifierProviderImpl<YesterdayCompletedTasksInCategory,
-        List<Task>> {
-  /// See also [YesterdayCompletedTasksInCategory].
-  YesterdayCompletedTasksInCategoryProvider(
-    int categoryId,
-  ) : this._internal(
-          () => YesterdayCompletedTasksInCategory()..categoryId = categoryId,
-          from: yesterdayCompletedTasksInCategoryProvider,
+final class YesterdayCompletedTasksInCategoryProvider
+    extends $NotifierProvider<YesterdayCompletedTasksInCategory, List<Task>> {
+  YesterdayCompletedTasksInCategoryProvider._(
+      {required YesterdayCompletedTasksInCategoryFamily super.from,
+      required int super.argument})
+      : super(
+          retry: null,
           name: r'yesterdayCompletedTasksInCategoryProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$yesterdayCompletedTasksInCategoryHash,
-          dependencies: YesterdayCompletedTasksInCategoryFamily._dependencies,
-          allTransitiveDependencies: YesterdayCompletedTasksInCategoryFamily
-              ._allTransitiveDependencies,
-          categoryId: categoryId,
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
         );
 
-  YesterdayCompletedTasksInCategoryProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.categoryId,
-  }) : super.internal();
-
-  final int categoryId;
+  @override
+  String debugGetCreateSourceHash() =>
+      _$yesterdayCompletedTasksInCategoryHash();
 
   @override
-  List<Task> runNotifierBuild(
-    covariant YesterdayCompletedTasksInCategory notifier,
-  ) {
-    return notifier.build(
-      categoryId,
-    );
+  String toString() {
+    return r'yesterdayCompletedTasksInCategoryProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  Override overrideWith(YesterdayCompletedTasksInCategory Function() create) {
-    return ProviderOverride(
+  YesterdayCompletedTasksInCategory create() =>
+      YesterdayCompletedTasksInCategory();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(List<Task> value) {
+    return $ProviderOverride(
       origin: this,
-      override: YesterdayCompletedTasksInCategoryProvider._internal(
-        () => create()..categoryId = categoryId,
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        categoryId: categoryId,
-      ),
+      providerOverride: $SyncValueProvider<List<Task>>(value),
     );
-  }
-
-  @override
-  AutoDisposeNotifierProviderElement<YesterdayCompletedTasksInCategory,
-      List<Task>> createElement() {
-    return _YesterdayCompletedTasksInCategoryProviderElement(this);
   }
 
   @override
   bool operator ==(Object other) {
     return other is YesterdayCompletedTasksInCategoryProvider &&
-        other.categoryId == categoryId;
+        other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, categoryId.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin YesterdayCompletedTasksInCategoryRef
-    on AutoDisposeNotifierProviderRef<List<Task>> {
-  /// The parameter `categoryId` of this provider.
-  int get categoryId;
-}
+String _$yesterdayCompletedTasksInCategoryHash() =>
+    r'7d280bd054d3afb9bb0736a4abdbba186b396974';
 
-class _YesterdayCompletedTasksInCategoryProviderElement
-    extends AutoDisposeNotifierProviderElement<
-        YesterdayCompletedTasksInCategory,
-        List<Task>> with YesterdayCompletedTasksInCategoryRef {
-  _YesterdayCompletedTasksInCategoryProviderElement(super.provider);
+final class YesterdayCompletedTasksInCategoryFamily extends $Family
+    with
+        $ClassFamilyOverride<YesterdayCompletedTasksInCategory, List<Task>,
+            List<Task>, List<Task>, int> {
+  YesterdayCompletedTasksInCategoryFamily._()
+      : super(
+          retry: null,
+          name: r'yesterdayCompletedTasksInCategoryProvider',
+          dependencies: null,
+          $allTransitiveDependencies: null,
+          isAutoDispose: true,
+        );
+
+  YesterdayCompletedTasksInCategoryProvider call(
+    int categoryId,
+  ) =>
+      YesterdayCompletedTasksInCategoryProvider._(
+          argument: categoryId, from: this);
 
   @override
-  int get categoryId =>
-      (origin as YesterdayCompletedTasksInCategoryProvider).categoryId;
+  String toString() => r'yesterdayCompletedTasksInCategoryProvider';
 }
 
-String _$pastCompletedTasksInCategoryHash() =>
-    r'c218feab95a7771fe409c35ab684a2d5aef23d6d';
-
-abstract class _$PastCompletedTasksInCategory
-    extends BuildlessAutoDisposeNotifier<List<Task>> {
-  late final int categoryId;
+abstract class _$YesterdayCompletedTasksInCategory
+    extends $Notifier<List<Task>> {
+  late final _$args = ref.$arg as int;
+  int get categoryId => _$args;
 
   List<Task> build(
     int categoryId,
   );
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<List<Task>, List<Task>>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<List<Task>, List<Task>>, List<Task>, Object?, Object?>;
+    element.handleCreate(
+        ref,
+        () => build(
+              _$args,
+            ));
+  }
 }
 
-/// See also [PastCompletedTasksInCategory].
 @ProviderFor(PastCompletedTasksInCategory)
-const pastCompletedTasksInCategoryProvider =
-    PastCompletedTasksInCategoryFamily();
+final pastCompletedTasksInCategoryProvider =
+    PastCompletedTasksInCategoryFamily._();
 
-/// See also [PastCompletedTasksInCategory].
-class PastCompletedTasksInCategoryFamily extends Family<List<Task>> {
-  /// See also [PastCompletedTasksInCategory].
-  const PastCompletedTasksInCategoryFamily();
-
-  /// See also [PastCompletedTasksInCategory].
-  PastCompletedTasksInCategoryProvider call(
-    int categoryId,
-  ) {
-    return PastCompletedTasksInCategoryProvider(
-      categoryId,
-    );
-  }
-
-  @override
-  PastCompletedTasksInCategoryProvider getProviderOverride(
-    covariant PastCompletedTasksInCategoryProvider provider,
-  ) {
-    return call(
-      provider.categoryId,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'pastCompletedTasksInCategoryProvider';
-}
-
-/// See also [PastCompletedTasksInCategory].
-class PastCompletedTasksInCategoryProvider
-    extends AutoDisposeNotifierProviderImpl<PastCompletedTasksInCategory,
-        List<Task>> {
-  /// See also [PastCompletedTasksInCategory].
-  PastCompletedTasksInCategoryProvider(
-    int categoryId,
-  ) : this._internal(
-          () => PastCompletedTasksInCategory()..categoryId = categoryId,
-          from: pastCompletedTasksInCategoryProvider,
+final class PastCompletedTasksInCategoryProvider
+    extends $NotifierProvider<PastCompletedTasksInCategory, List<Task>> {
+  PastCompletedTasksInCategoryProvider._(
+      {required PastCompletedTasksInCategoryFamily super.from,
+      required int super.argument})
+      : super(
+          retry: null,
           name: r'pastCompletedTasksInCategoryProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$pastCompletedTasksInCategoryHash,
-          dependencies: PastCompletedTasksInCategoryFamily._dependencies,
-          allTransitiveDependencies:
-              PastCompletedTasksInCategoryFamily._allTransitiveDependencies,
-          categoryId: categoryId,
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
         );
 
-  PastCompletedTasksInCategoryProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.categoryId,
-  }) : super.internal();
-
-  final int categoryId;
+  @override
+  String debugGetCreateSourceHash() => _$pastCompletedTasksInCategoryHash();
 
   @override
-  List<Task> runNotifierBuild(
-    covariant PastCompletedTasksInCategory notifier,
-  ) {
-    return notifier.build(
-      categoryId,
-    );
+  String toString() {
+    return r'pastCompletedTasksInCategoryProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  Override overrideWith(PastCompletedTasksInCategory Function() create) {
-    return ProviderOverride(
+  PastCompletedTasksInCategory create() => PastCompletedTasksInCategory();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(List<Task> value) {
+    return $ProviderOverride(
       origin: this,
-      override: PastCompletedTasksInCategoryProvider._internal(
-        () => create()..categoryId = categoryId,
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        categoryId: categoryId,
-      ),
+      providerOverride: $SyncValueProvider<List<Task>>(value),
     );
-  }
-
-  @override
-  AutoDisposeNotifierProviderElement<PastCompletedTasksInCategory, List<Task>>
-      createElement() {
-    return _PastCompletedTasksInCategoryProviderElement(this);
   }
 
   @override
   bool operator ==(Object other) {
     return other is PastCompletedTasksInCategoryProvider &&
-        other.categoryId == categoryId;
+        other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, categoryId.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin PastCompletedTasksInCategoryRef
-    on AutoDisposeNotifierProviderRef<List<Task>> {
-  /// The parameter `categoryId` of this provider.
-  int get categoryId;
-}
+String _$pastCompletedTasksInCategoryHash() =>
+    r'c218feab95a7771fe409c35ab684a2d5aef23d6d';
 
-class _PastCompletedTasksInCategoryProviderElement
-    extends AutoDisposeNotifierProviderElement<PastCompletedTasksInCategory,
-        List<Task>> with PastCompletedTasksInCategoryRef {
-  _PastCompletedTasksInCategoryProviderElement(super.provider);
+final class PastCompletedTasksInCategoryFamily extends $Family
+    with
+        $ClassFamilyOverride<PastCompletedTasksInCategory, List<Task>,
+            List<Task>, List<Task>, int> {
+  PastCompletedTasksInCategoryFamily._()
+      : super(
+          retry: null,
+          name: r'pastCompletedTasksInCategoryProvider',
+          dependencies: null,
+          $allTransitiveDependencies: null,
+          isAutoDispose: true,
+        );
+
+  PastCompletedTasksInCategoryProvider call(
+    int categoryId,
+  ) =>
+      PastCompletedTasksInCategoryProvider._(argument: categoryId, from: this);
 
   @override
-  int get categoryId =>
-      (origin as PastCompletedTasksInCategoryProvider).categoryId;
+  String toString() => r'pastCompletedTasksInCategoryProvider';
 }
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+
+abstract class _$PastCompletedTasksInCategory extends $Notifier<List<Task>> {
+  late final _$args = ref.$arg as int;
+  int get categoryId => _$args;
+
+  List<Task> build(
+    int categoryId,
+  );
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<List<Task>, List<Task>>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<List<Task>, List<Task>>, List<Task>, Object?, Object?>;
+    element.handleCreate(
+        ref,
+        () => build(
+              _$args,
+            ));
+  }
+}
+
+@ProviderFor(numberOfAllActiveTasks)
+final numberOfAllActiveTasksProvider = NumberOfAllActiveTasksProvider._();
+
+final class NumberOfAllActiveTasksProvider
+    extends $FunctionalProvider<int, int, int> with $Provider<int> {
+  NumberOfAllActiveTasksProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'numberOfAllActiveTasksProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$numberOfAllActiveTasksHash();
+
+  @$internal
+  @override
+  $ProviderElement<int> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  int create(Ref ref) {
+    return numberOfAllActiveTasks(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(int value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<int>(value),
+    );
+  }
+}
+
+String _$numberOfAllActiveTasksHash() =>
+    r'719f041b69dcf6d7eb7a7c5c1685f3f9d37f1628';
+
+@ProviderFor(uncategorizedTasks)
+final uncategorizedTasksProvider = UncategorizedTasksProvider._();
+
+final class UncategorizedTasksProvider
+    extends $FunctionalProvider<List<Task>, List<Task>, List<Task>>
+    with $Provider<List<Task>> {
+  UncategorizedTasksProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'uncategorizedTasksProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$uncategorizedTasksHash();
+
+  @$internal
+  @override
+  $ProviderElement<List<Task>> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  List<Task> create(Ref ref) {
+    return uncategorizedTasks(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(List<Task> value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<List<Task>>(value),
+    );
+  }
+}
+
+String _$uncategorizedTasksHash() =>
+    r'4013d9e97aa3b92db43ebc03e1de7430fecea4e3';
+
+@ProviderFor(numberOfActiveTasksInCategory)
+final numberOfActiveTasksInCategoryProvider =
+    NumberOfActiveTasksInCategoryFamily._();
+
+final class NumberOfActiveTasksInCategoryProvider
+    extends $FunctionalProvider<int, int, int> with $Provider<int> {
+  NumberOfActiveTasksInCategoryProvider._(
+      {required NumberOfActiveTasksInCategoryFamily super.from,
+      required int? super.argument})
+      : super(
+          retry: null,
+          name: r'numberOfActiveTasksInCategoryProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$numberOfActiveTasksInCategoryHash();
+
+  @override
+  String toString() {
+    return r'numberOfActiveTasksInCategoryProvider'
+        ''
+        '($argument)';
+  }
+
+  @$internal
+  @override
+  $ProviderElement<int> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  int create(Ref ref) {
+    final argument = this.argument as int?;
+    return numberOfActiveTasksInCategory(
+      ref,
+      argument,
+    );
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(int value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<int>(value),
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is NumberOfActiveTasksInCategoryProvider &&
+        other.argument == argument;
+  }
+
+  @override
+  int get hashCode {
+    return argument.hashCode;
+  }
+}
+
+String _$numberOfActiveTasksInCategoryHash() =>
+    r'5117cb5433e813fcbe37446632c0763e38ff9a19';
+
+final class NumberOfActiveTasksInCategoryFamily extends $Family
+    with $FunctionalFamilyOverride<int, int?> {
+  NumberOfActiveTasksInCategoryFamily._()
+      : super(
+          retry: null,
+          name: r'numberOfActiveTasksInCategoryProvider',
+          dependencies: null,
+          $allTransitiveDependencies: null,
+          isAutoDispose: true,
+        );
+
+  NumberOfActiveTasksInCategoryProvider call(
+    int? categoryId,
+  ) =>
+      NumberOfActiveTasksInCategoryProvider._(argument: categoryId, from: this);
+
+  @override
+  String toString() => r'numberOfActiveTasksInCategoryProvider';
+}
+
+@ProviderFor(completionProgress)
+final completionProgressProvider = CompletionProgressFamily._();
+
+final class CompletionProgressProvider
+    extends $FunctionalProvider<double, double, double> with $Provider<double> {
+  CompletionProgressProvider._(
+      {required CompletionProgressFamily super.from,
+      required int super.argument})
+      : super(
+          retry: null,
+          name: r'completionProgressProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$completionProgressHash();
+
+  @override
+  String toString() {
+    return r'completionProgressProvider'
+        ''
+        '($argument)';
+  }
+
+  @$internal
+  @override
+  $ProviderElement<double> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  double create(Ref ref) {
+    final argument = this.argument as int;
+    return completionProgress(
+      ref,
+      argument,
+    );
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(double value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<double>(value),
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is CompletionProgressProvider && other.argument == argument;
+  }
+
+  @override
+  int get hashCode {
+    return argument.hashCode;
+  }
+}
+
+String _$completionProgressHash() =>
+    r'1756a0d46961b8765f18fdca1869bd71f065e82d';
+
+final class CompletionProgressFamily extends $Family
+    with $FunctionalFamilyOverride<double, int> {
+  CompletionProgressFamily._()
+      : super(
+          retry: null,
+          name: r'completionProgressProvider',
+          dependencies: null,
+          $allTransitiveDependencies: null,
+          isAutoDispose: true,
+        );
+
+  CompletionProgressProvider call(
+    int categoryId,
+  ) =>
+      CompletionProgressProvider._(argument: categoryId, from: this);
+
+  @override
+  String toString() => r'completionProgressProvider';
+}
+
+@ProviderFor(appBackgroundColor)
+final appBackgroundColorProvider = AppBackgroundColorProvider._();
+
+final class AppBackgroundColorProvider
+    extends $FunctionalProvider<Color, Color, Color> with $Provider<Color> {
+  AppBackgroundColorProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'appBackgroundColorProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$appBackgroundColorHash();
+
+  @$internal
+  @override
+  $ProviderElement<Color> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  Color create(Ref ref) {
+    return appBackgroundColor(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(Color value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<Color>(value),
+    );
+  }
+}
+
+String _$appBackgroundColorHash() =>
+    r'acbf96cc00128f489e688f83fea140e606ea9e00';

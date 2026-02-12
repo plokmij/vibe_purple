@@ -1,6 +1,6 @@
 import 'package:ant_icons/ant_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:purple_task/l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purple_task/core/constants/custom_styles.dart';
 import 'package:purple_task/features/todos/controllers/categories_controller.dart';
@@ -20,8 +20,8 @@ class TaskMenu extends StatelessWidget {
     final tr = AppLocalizations.of(context);
     return Consumer(
       builder: (context, ref, _) {
-        final categories = ref.watch(categoriesNotifierProvider);
-        final otherCategories = categories.valueOrNull
+        final categories = ref.watch(categoriesProvider);
+        final otherCategories = categories.value
             ?.where((element) => element.id != task.categoryId);
 
         return MenuAnchor(
@@ -33,7 +33,7 @@ class TaskMenu extends StatelessWidget {
                 style: CustomStyle.textStyleWarning, // TODO style font size
               ),
               onPressed: () => ref
-                  .read(tasksNotifierProvider.notifier)
+                  .read(tasksProvider.notifier)
                   .remove(taskId: task.id!),
             ),
             SubmenuButton(
@@ -42,7 +42,7 @@ class TaskMenu extends StatelessWidget {
                   onPressed: () {
                     final now = DateTime.now();
                     final today = DateTime(now.year, now.month, now.day);
-                    ref.read(tasksNotifierProvider.notifier).updateTask(
+                    ref.read(tasksProvider.notifier).updateTask(
                           task: task.copyWith(
                             dueDate: () => today.millisecondsSinceEpoch,
                           ),
@@ -54,7 +54,7 @@ class TaskMenu extends StatelessWidget {
                   onPressed: () {
                     final now = DateTime.now();
                     final tomorrow = DateTime(now.year, now.month, now.day + 1);
-                    ref.read(tasksNotifierProvider.notifier).updateTask(
+                    ref.read(tasksProvider.notifier).updateTask(
                           task: task.copyWith(
                             dueDate: () => tomorrow.millisecondsSinceEpoch,
                           ),
@@ -71,7 +71,7 @@ class TaskMenu extends StatelessWidget {
                 MenuItemButton(
                   onPressed: () {
                     ref
-                        .read(tasksNotifierProvider.notifier)
+                        .read(tasksProvider.notifier)
                         .updateTask(task: task.copyWith(dueDate: () => null));
                   },
                   child: Text(tr.noDate),
@@ -102,7 +102,7 @@ class TaskMenu extends StatelessWidget {
                       ),
                       onPressed: () {
                         ref
-                            .read(tasksNotifierProvider.notifier)
+                            .read(tasksProvider.notifier)
                             .updateTask(task: task.copyWith(categoryId: e.id));
                       },
                     ),
@@ -113,7 +113,7 @@ class TaskMenu extends StatelessWidget {
                       child: Text(tr.noCategoryHeader),
                       onPressed: () {
                         ref
-                            .read(tasksNotifierProvider.notifier)
+                            .read(tasksProvider.notifier)
                             .updateTask(task: task.copyWith(categoryId: -1));
                       },
                     ),
@@ -159,7 +159,7 @@ class TaskMenu extends StatelessWidget {
       final updatedTask =
           task.copyWith(dueDate: () => selectedDate.millisecondsSinceEpoch);
       await ref
-          .read(tasksNotifierProvider.notifier)
+          .read(tasksProvider.notifier)
           .updateTask(task: updatedTask);
     }
   }

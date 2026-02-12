@@ -1,4 +1,4 @@
-import 'package:hive/hive.dart';
+import 'package:hive_ce/hive.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 import 'package:purple_task/core/constants/key_names.dart';
 import 'package:purple_task/core/hive_legacy/hive_entities/category_entity.dart';

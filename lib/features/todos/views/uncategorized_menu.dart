@@ -1,6 +1,6 @@
 import 'package:ant_icons/ant_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:purple_task/l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purple_task/core/ui/widgets/confirmation_dialog.dart';
 import 'package:purple_task/features/todos/controllers/category_controller.dart';
@@ -37,7 +37,7 @@ class UncategorizedMenu extends ConsumerWidget {
               controller.close();
             } else {
               ref
-                  .read(categoryNotifierProvider.notifier)
+                  .read(categoryProvider.notifier)
                   .setCurrentCategory(null);
               controller.open();
             }
@@ -65,7 +65,7 @@ class UncategorizedMenu extends ConsumerWidget {
         confirmationColor: Colors.red,
         onConfirm: () {
           ref
-              .read(tasksNotifierProvider.notifier)
+              .read(tasksProvider.notifier)
               .removeCompletedTasksForCategory(categoryId: -1);
         },
       ),
@@ -85,7 +85,7 @@ class UncategorizedMenu extends ConsumerWidget {
         confirmationText: tr.delete,
         confirmationColor: Colors.red,
         onConfirm: () => ref
-            .read(tasksNotifierProvider.notifier)
+            .read(tasksProvider.notifier)
             .removeAllTasksForCategory(categoryId: -1),
       ),
     );

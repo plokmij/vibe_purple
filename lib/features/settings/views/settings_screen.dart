@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:purple_task/l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purple_task/core/ui/widgets/dialog_base.dart';
 import 'package:purple_task/features/settings/controllers/settings_controller.dart';
@@ -20,8 +20,8 @@ class SettingsScreen extends StatelessWidget {
       content: Expanded(
         child: Consumer(
           builder: (context, ref, _) {
-            final state = ref.watch(settingsNotifierProvider);
-            final controller = ref.watch(settingsNotifierProvider.notifier);
+            final state = ref.watch(settingsProvider);
+            final controller = ref.watch(settingsProvider.notifier);
 
             return ListView(
               padding: const EdgeInsets.symmetric(horizontal: 28),

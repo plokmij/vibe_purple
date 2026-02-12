@@ -8,7 +8,7 @@ part of 'task_entity.dart';
 
 class TaskEntityAdapter extends TypeAdapter<TaskEntity> {
   @override
-  final int typeId = 2;
+  final typeId = 2;
 
   @override
   TaskEntity read(BinaryReader reader) {
@@ -19,9 +19,9 @@ class TaskEntityAdapter extends TypeAdapter<TaskEntity> {
     return TaskEntity(
       name: fields[0] as String,
       isDone: fields[1] as bool,
-      categoryId: fields[2] as int,
-      doneTime: fields[3] as int?,
-      dueDate: fields[4] as int?,
+      categoryId: (fields[2] as num).toInt(),
+      doneTime: (fields[3] as num?)?.toInt(),
+      dueDate: (fields[4] as num?)?.toInt(),
     );
   }
 

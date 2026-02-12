@@ -9,8 +9,8 @@ class TimeFormatSelector extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final settingsState = ref.watch(settingsNotifierProvider);
-    final controller = ref.watch(settingsNotifierProvider.notifier);
+    final settingsState = ref.watch(settingsProvider);
+    final controller = ref.watch(settingsProvider.notifier);
     return MenuAnchor(
       menuChildren: [
         ...timeFormats.map(

@@ -63,12 +63,12 @@ class NewCategoryNotifier extends _$NewCategoryNotifier {
         .add(newCategory: newCategory);
 
     await _addTasksForCategory(newCategoryId);
-    await ref.read(categoriesNotifierProvider.notifier).refreshCategories();
+    await ref.read(categoriesProvider.notifier).refreshCategories();
   }
 
   Future<void> _addTasksForCategory(int categoryId) async {
     if (state.tasksNamesList.isNotEmpty) {
-      await ref.read(tasksNotifierProvider.notifier).addTasksList(
+      await ref.read(tasksProvider.notifier).addTasksList(
             tasksList: state.tasksNamesList
                 .map(
                   (taskName) => Task(
