@@ -48,6 +48,18 @@ class NewCategoryNotifier extends _$NewCategoryNotifier {
     state = state.copyWith(status: NewCategoryStatus.tasks);
   }
 
+  void backToName() {
+    state = state.copyWith(status: NewCategoryStatus.name);
+  }
+
+  void backToColor() {
+    state = state.copyWith(status: NewCategoryStatus.color);
+  }
+
+  void backToIcon() {
+    state = state.copyWith(status: NewCategoryStatus.icon);
+  }
+
   void updateNewTasksList(String taskName) {
     state = state.copyWith(tasksNamesList: [...state.tasksNamesList, taskName]);
   }

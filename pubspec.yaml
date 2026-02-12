@@ -9,6 +9,7 @@ dependencies:
   ant_icons:
     path: packages/ant_icons
   collection: ^1.19.0
+  cupertino_icons: ^1.0.8
   drift: ^2.22.1
   drift_flutter: ^0.2.2
   equatable: ^2.0.0
@@ -26,6 +27,7 @@ dependencies:
   riverpod_annotation: ^4.0.0
   shared_preferences: ^2.3.3
   url_launcher: ^6.3.1
+  macos_ui: ^2.2.2
 dev_dependencies:
   build_runner: ^2.4.13
   custom_lint: ^0.8.1
