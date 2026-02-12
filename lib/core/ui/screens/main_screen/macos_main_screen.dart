@@ -73,7 +73,8 @@ class _MacosMainScreenState extends ConsumerState<MacosMainScreen> {
 
     return MacosWindow(
       sidebar: Sidebar(
-        minWidth: 200,
+        minWidth: 220,
+        startWidth: 240,
         builder: (context, scrollController) {
           return SidebarItems(
             scrollController: scrollController,

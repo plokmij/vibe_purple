@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:macos_ui/macos_ui.dart';
+import 'package:purple_task/core/styles/macos_themes.dart';
 import 'package:purple_task/features/todos/controllers/categories_controller.dart';
 import 'package:purple_task/features/todos/controllers/tasks_controller.dart';
 import 'package:purple_task/features/todos/models/category.dart';
@@ -53,9 +54,8 @@ class _MacosCategoryContentState extends ConsumerState<MacosCategoryContent> {
     }
 
     final brightness = MacosTheme.of(context).brightness;
-    final backgroundColor = brightness == Brightness.dark
-        ? const Color(0xFF2D2D2D)
-        : CupertinoColors.systemBackground;
+    final backgroundColor = PurpleMacosTheme.getContentBackground(brightness);
+    final dividerColor = PurpleMacosTheme.getSectionDividerColor(brightness);
 
     return ColoredBox(
       color: backgroundColor,
@@ -78,8 +78,13 @@ class _MacosCategoryContentState extends ConsumerState<MacosCategoryContent> {
               filterType: _tabController.index,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(12),
+          Container(
+            decoration: BoxDecoration(
+              border: Border(
+                top: BorderSide(color: dividerColor, width: 1),
+              ),
+            ),
+            padding: const EdgeInsets.all(16),
             child: MacosAddTaskField(
               onAddTask: (value) {
                 final task = Task(
